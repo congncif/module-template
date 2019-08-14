@@ -13,3 +13,11 @@ Generate base files of [`IDMCore`](https://github.com/congncif/IDMCore) &amp; [`
 * Open Terminal, run command: ```./install-template.sh```
 
 Now you can use the templates by add a new file.
+
+## Usage
+
+***Using ModuleX template***
+
+While `Storyboard Segue & Dependency Bridge` template is most convenience using for routing between modules in an internal `Package` | `Bundle`, `default` template is most independent and flexiable for integrating with other modules in external `Packages` | `Bundles`.
+
+A best practice is combining both templates depending on the specific use case.
