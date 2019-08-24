@@ -9,10 +9,11 @@
 import Foundation
 import ModuleX
 
-final class ___VARIABLE_moduleName___Router: ___VARIABLE_moduleName___RouterProtocol {
+final class ___VARIABLE_moduleName___Router: Router, ___VARIABLE_moduleName___RouterProtocol {
     private weak var sourceModule: ___VARIABLE_moduleName___ModuleInterface?
 
     init(sourceModule: ___VARIABLE_moduleName___ModuleInterface?) {
+    	super.init(sourceModule: sourceModule)
         self.sourceModule = sourceModule
     }
 
