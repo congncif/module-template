@@ -11,11 +11,12 @@ import UIKit
 import ViewStateCore
 
 final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIABLE_moduleName___ControllerProtocol, ___VARIABLE_moduleName___ModuleInterface {
-    public var output: ___VARIABLE_moduleName___OutputProtocol?
-    public var router: ___VARIABLE_moduleName___RouterProtocol?
+    private(set) var output: ___VARIABLE_moduleName___OutputProtocol?
+    private(set) var router: ___VARIABLE_moduleName___RouterProtocol?
 
-    var presenter: ___VARIABLE_moduleName___PresenterProtocol!
-    var integrator: ___VARIABLE_moduleName___AbstractIntegrator!
+    private(set) var integrator: ___VARIABLE_moduleName___AbstractIntegrator!
+
+    private(set) var presenter: ___VARIABLE_moduleName___PresenterProtocol!
 
     private var customView: UIView?
 
@@ -24,8 +25,20 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
         super.init(nibName: nil, bundle: nil)
     }
 
-    func inject(integrator: ___VARIABLE_moduleName___AbstractIntegrator) {
+    public func connect(output: ___VARIABLE_moduleName___OutputProtocol) {
+        self.output = output
+    }
+
+    public func connect(router: ___VARIABLE_moduleName___RouterProtocol) {
+        self.router = router
+    }
+
+    public func inject(integrator: ___VARIABLE_moduleName___AbstractIntegrator) {
         self.integrator = integrator
+    }
+
+    func setPresenter(_ presenter: ___VARIABLE_moduleName___PresenterProtocol) {
+        self.presenter = presenter
     }
 
     required init?(coder aDecoder: NSCoder) {

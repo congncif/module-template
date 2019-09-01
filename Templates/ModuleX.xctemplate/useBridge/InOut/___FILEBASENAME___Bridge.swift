@@ -30,7 +30,7 @@ final class ___VARIABLE_moduleName___Bridge: NSObject, ___VARIABLE_moduleName___
 
         viewController.loadViewIfNeeded()
 
-        viewController.dependencyBridge = self
+        viewController.setDependencyBridge(self)
 
         _presenter.actionDelegate = viewController
         _presenter.add(errorHandler: viewController.asErrorHandler())

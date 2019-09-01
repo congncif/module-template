@@ -21,7 +21,7 @@ public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Builder
 
         var presenter = ___VARIABLE_moduleName___Presenter()
 
-        viewController.presenter = presenter
+        viewController.setPresenter(presenter)
 
         presenter.actionDelegate = viewController
         presenter.add(errorHandler: viewController.asErrorHandler())

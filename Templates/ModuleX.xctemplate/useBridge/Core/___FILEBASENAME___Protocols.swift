@@ -21,8 +21,8 @@ import ViewStateCore
 /// Come from outside
 
 public protocol ___VARIABLE_moduleName___ModuleInterface: ModuleInterface, ___VARIABLE_moduleName___InputProtocol {
-    var output: ___VARIABLE_moduleName___OutputProtocol? { get set }
-    var router: ___VARIABLE_moduleName___RouterProtocol? { get set }
+    func connect(output: ___VARIABLE_moduleName___OutputProtocol)
+    func connect(router: ___VARIABLE_moduleName___RouterProtocol)
 
     func inject(integrator: ___VARIABLE_moduleName___AbstractIntegrator)
 }
@@ -53,6 +53,9 @@ protocol ___VARIABLE_moduleName___ViewProtocol: ViewStateSubscriber {
 }
 
 protocol ___VARIABLE_moduleName___ControllerProtocol {
+    var output: ___VARIABLE_moduleName___OutputProtocol? { get }
+    var router: ___VARIABLE_moduleName___RouterProtocol? { get }
+
     var presenter: ___VARIABLE_moduleName___PresenterProtocol! { get }
     var integrator: ___VARIABLE_moduleName___AbstractIntegrator! { get }
 
