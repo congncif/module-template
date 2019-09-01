@@ -15,6 +15,11 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
 	public var router: ___VARIABLE_moduleName___RouterProtocol?
 
     var dependencyBridge: ___VARIABLE_moduleName___DependencyBridge!
+    var integrator: ___VARIABLE_moduleName___AbstractIntegrator!
+
+    func inject(integrator: ___VARIABLE_moduleName___AbstractIntegrator) {
+    	self.integrator = integrator
+    }
 
 	override func viewDidLoad() {
         super.viewDidLoad()

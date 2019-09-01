@@ -23,6 +23,8 @@ import ViewStateCore
 public protocol ___VARIABLE_moduleName___ModuleInterface: ModuleInterface, ___VARIABLE_moduleName___InputProtocol {
     var output: ___VARIABLE_moduleName___OutputProtocol? { get set }
     var router: ___VARIABLE_moduleName___RouterProtocol? { get set }
+
+    func inject(integrator: ___VARIABLE_moduleName___AbstractIntegrator)
 }
 
 public protocol ___VARIABLE_moduleName___BuilderProtocol {

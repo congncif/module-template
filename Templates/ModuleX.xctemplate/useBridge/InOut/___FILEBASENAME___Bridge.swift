@@ -20,8 +20,6 @@ final class ___VARIABLE_moduleName___Bridge: NSObject, ___VARIABLE_moduleName___
     var presenter: ___VARIABLE_moduleName___PresenterProtocol! {
         return _presenter
     }
-    
-    var integrator: ___VARIABLE_moduleName___AbstractIntegrator!
 
     override init() {
         super.init()

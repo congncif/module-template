@@ -24,6 +24,10 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
         super.init(nibName: nil, bundle: nil)
     }
 
+    func inject(integrator: ___VARIABLE_moduleName___AbstractIntegrator) {
+        self.integrator = integrator
+    }
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
