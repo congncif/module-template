@@ -12,25 +12,18 @@ import ModuleX
 struct ___VARIABLE_moduleName___Router: ___VARIABLE_moduleName___RouterProtocol {
     private weak var sourceModule: ___VARIABLE_moduleName___ModuleInterface?
 
-    mutating func connectSourceModule(_ sourceModule: ___VARIABLE_moduleName___ModuleInterface) {
-    	self.sourceModule = sourceModule
-    }
-
-    private var connectedSource: ___VARIABLE_moduleName___ModuleInterface {
-        guard let source = sourceModule else {
-            preconditionFailure("💥💥💥 Source module was not set or disconnected before using.")
-        }
-        return source
+    init(sourceModule: ___VARIABLE_moduleName___ModuleInterface) {
+        self.sourceModule = sourceModule
     }
 }
 
 protocol ___VARIABLE_moduleName___RouterFactoryType {
-	func getRouter() -> ___VARIABLE_moduleName___RouterProtocol
+	func getRouter(sourceModule: ___VARIABLE_moduleName___ModuleInterface) -> ___VARIABLE_moduleName___RouterProtocol
 }
 
 struct ___VARIABLE_moduleName___RouterFactory: ___VARIABLE_moduleName___RouterFactoryType {
-	func getRouter() -> ___VARIABLE_moduleName___RouterProtocol {
-		let router = ___VARIABLE_moduleName___Router()
+	func getRouter(sourceModule: ___VARIABLE_moduleName___ModuleInterface) -> ___VARIABLE_moduleName___RouterProtocol {
+		let router = ___VARIABLE_moduleName___Router(sourceModule: sourceModule)
 		return router
 	}
 }

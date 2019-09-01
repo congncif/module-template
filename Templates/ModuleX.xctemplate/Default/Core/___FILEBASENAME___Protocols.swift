@@ -34,7 +34,9 @@ public protocol ___VARIABLE_moduleName___InputProtocol {}
 public protocol ___VARIABLE_moduleName___OutputProtocol {}
 
 // Declare methods go out to next module
-public protocol ___VARIABLE_moduleName___RouterProtocol {}
+public protocol ___VARIABLE_moduleName___RouterProtocol {
+    init(sourceModule: ___VARIABLE_moduleName___ModuleInterface)
+}
 
 /// Internal
 
