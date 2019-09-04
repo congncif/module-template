@@ -17,10 +17,6 @@ struct ___VARIABLE_moduleName___Router: ___VARIABLE_moduleName___RouterProtocol 
     }
 }
 
-protocol ___VARIABLE_moduleName___RouterFactoryType {
-	func getRouter(sourceModule: ___VARIABLE_moduleName___ModuleInterface) -> ___VARIABLE_moduleName___RouterProtocol
-}
-
 struct ___VARIABLE_moduleName___RouterFactory: ___VARIABLE_moduleName___RouterFactoryType {
 	func getRouter(sourceModule: ___VARIABLE_moduleName___ModuleInterface) -> ___VARIABLE_moduleName___RouterProtocol {
 		let router = ___VARIABLE_moduleName___Router(sourceModule: sourceModule)

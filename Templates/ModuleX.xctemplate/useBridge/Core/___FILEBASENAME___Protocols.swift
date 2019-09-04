@@ -44,6 +44,10 @@ public protocol ___VARIABLE_moduleName___RouterProtocol {
     init(sourceModule: ___VARIABLE_moduleName___ModuleInterface)
 }
 
+public protocol ___VARIABLE_moduleName___RouterFactoryType {
+    func getRouter(sourceModule: ___VARIABLE_moduleName___ModuleInterface) -> ___VARIABLE_moduleName___RouterProtocol
+}
+
 /// Internal
 
 protocol ___VARIABLE_moduleName___ViewActionDelegate: AnyObject {
