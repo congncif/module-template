@@ -14,7 +14,7 @@ final class ___VARIABLE_moduleName___View: UIView, ___VARIABLE_moduleName___View
 }
 
 extension ___VARIABLE_moduleName___View: DedicatedViewStateFillable {
-    func didicatedFillingOptions(_ state: ___VARIABLE_moduleName___ViewState) -> [FillingOption] {
+    func dedicatedFillingOptions(_ state: ___VARIABLE_moduleName___ViewState) -> [FillingOption] {
         // <#Configure to render View here#>
         return []
     }
