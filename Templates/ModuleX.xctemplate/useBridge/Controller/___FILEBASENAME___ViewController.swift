@@ -55,6 +55,9 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
     }
 
     override func viewDidFinishInitialLayout() {
+        // Guarantee all mandatory properties must be injected.
+        assert(self.integrator != nil)
+
         activateView()
     }
 }
