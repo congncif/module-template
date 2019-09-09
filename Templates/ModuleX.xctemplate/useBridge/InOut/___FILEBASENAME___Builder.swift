@@ -20,7 +20,7 @@ public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Builder
         self.routerFactory = routerFactory
     }
 
-    public func build() -> ___VARIABLE_moduleName___ModuleInterface {
+    public func build(output: ___VARIABLE_moduleName___OutputProtocol?) -> ___VARIABLE_moduleName___ModuleInterface {
         let viewController = ___VARIABLE_moduleName___ViewController.instantiateFromStoryboard()
 
         // Inject dependencies
@@ -29,6 +29,10 @@ public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Builder
 
         if let router = routerFactory?.getRouter(sourceModule: viewController) {
             viewController.connect(router: router)
+        }
+
+        if let delegate = output {
+            viewController.connect(output: delegate)
         }
         
         return viewController

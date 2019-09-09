@@ -22,7 +22,13 @@ public protocol ___VARIABLE_moduleName___ModuleInterface: ModuleInterface, ___VA
 }
 
 public protocol ___VARIABLE_moduleName___BuilderProtocol {
-    func build() -> ___VARIABLE_moduleName___ModuleInterface
+    func build(output: ___VARIABLE_moduleName___OutputProtocol?) -> ___VARIABLE_moduleName___ModuleInterface
+}
+
+extension ___VARIABLE_moduleName___BuilderProtocol {
+    public func build() -> ___VARIABLE_moduleName___ModuleInterface {
+        return build(output: nil)
+    }
 }
 
 /// In/Out
@@ -35,7 +41,7 @@ public protocol ___VARIABLE_moduleName___OutputProtocol {}
 
 // Declare methods go out to next module
 public protocol ___VARIABLE_moduleName___RouterProtocol {
-    init(sourceModule: ___VARIABLE_moduleName___ModuleInterface)
+	var sourceModule: ___VARIABLE_moduleName___ModuleInterface? { get }
 }
 
 public protocol ___VARIABLE_moduleName___RouterFactoryType {

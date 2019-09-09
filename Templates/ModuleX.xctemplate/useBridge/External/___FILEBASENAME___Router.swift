@@ -10,7 +10,7 @@ import Foundation
 import ModuleX
 
 struct ___VARIABLE_moduleName___Router: ___VARIABLE_moduleName___RouterProtocol {
-    private weak var sourceModule: ___VARIABLE_moduleName___ModuleInterface?
+    weak var sourceModule: ___VARIABLE_moduleName___ModuleInterface?
 
     init(sourceModule: ___VARIABLE_moduleName___ModuleInterface) {
         self.sourceModule = sourceModule

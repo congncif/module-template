@@ -20,7 +20,7 @@ public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Builder
 		self.routerFactory = routerFactory
 	}
 
-    public func build() -> ___VARIABLE_moduleName___ModuleInterface {
+    public func build(output: ___VARIABLE_moduleName___OutputProtocol?) -> ___VARIABLE_moduleName___ModuleInterface {
         let contentView = ___VARIABLE_moduleName___View(frame: UIScreen.main.bounds)
 
         let viewController = ___VARIABLE_moduleName___ViewController(customView: contentView)
@@ -49,6 +49,10 @@ public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Builder
         if let routerFactory = self.routerFactory {
         	let router = routerFactory.getRouter(sourceModule: viewController)
         	viewController.connect(router: router)
+        }
+
+        if let delegate = output {
+            viewController.connect(output: delegate)
         }
 
         return viewController
