@@ -26,3 +26,5 @@ extension ___VARIABLE_moduleName___Segue {
         return source as? ___VARIABLE_moduleName___ModuleInterface
     }
 }
+
+extension  ___VARIABLE_moduleName___Segue: ___VARIABLE_moduleName___InternalRouterProtocol {}

@@ -36,6 +36,7 @@ extension ___VARIABLE_moduleName___BuilderProtocol {
         return build(output: nil)
     }
 }
+
 /// In/Out
 
 // Declare methods come in from outside module
@@ -46,7 +47,7 @@ public protocol ___VARIABLE_moduleName___OutputProtocol {}
 
 // Declare methods go out to next module
 public protocol ___VARIABLE_moduleName___RouterProtocol {
-    var sourceModule: ___VARIABLE_moduleName___ModuleInterface? { get }
+    init(sourceModule: ___VARIABLE_moduleName___ModuleInterface)
 }
 
 public protocol ___VARIABLE_moduleName___RouterFactoryType {
@@ -80,3 +81,6 @@ protocol ___VARIABLE_moduleName___PresenterProtocol {
     var dataLoadingHandler: LoadingProtocol! { get }
     var dataResponseHandler: DataProcessor<___VARIABLE_moduleName___ResponseModel> { get }
 }
+
+/// Use for Segue Routing only
+protocol ___VARIABLE_moduleName___InternalRouterProtocol {}
