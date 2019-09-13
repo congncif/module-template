@@ -9,6 +9,5 @@
 import Foundation
 import UIKit
 
-extension ___VARIABLE_moduleName___ViewActionDelegate where Self: ___VARIABLE_moduleName___ControllerProtocol, Self: ___VARIABLE_moduleName___ModuleInterface {
-	
-}
+/// Present alert, call to system services or other modules etc.
+extension ___VARIABLE_moduleName___ViewActionDelegate where Self: ___VARIABLE_moduleName___ModuleInterface {}

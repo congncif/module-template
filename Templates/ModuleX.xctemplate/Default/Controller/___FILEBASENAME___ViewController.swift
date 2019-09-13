@@ -11,19 +11,10 @@ import UIKit
 import ViewStateCore
 
 final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIABLE_moduleName___ControllerProtocol, ___VARIABLE_moduleName___ModuleInterface {
+    // MARK: - In/Out
+
     private var myOutput: ___VARIABLE_moduleName___OutputProtocol?
     private var myRouter: ___VARIABLE_moduleName___RouterProtocol?
-
-    private(set) var integrator: ___VARIABLE_moduleName___AbstractIntegrator!
-
-    private(set) var presenter: ___VARIABLE_moduleName___PresenterProtocol!
-
-    private var customView: UIView?
-
-    init(customView: UIView) {
-        self.customView = customView
-        super.init(nibName: nil, bundle: nil)
-    }
 
     public func connect(output: ___VARIABLE_moduleName___OutputProtocol) {
         self.myOutput = output
@@ -34,27 +25,47 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
     }
 
     public var output: ___VARIABLE_moduleName___OutputProtocol? {
-    	guard let reference = myOutput else {
-    		assertionFailure("💥💥💥 Output was not set or disconnected before using.")
+        guard let reference = myOutput else {
+            assertionFailure("💥💥💥 Output was not set or disconnected before using.")
             return nil
         }
         return reference
     }
 
     public var router: ___VARIABLE_moduleName___RouterProtocol? {
-    	guard let reference = myRouter else {
-    		assertionFailure("💥💥💥 Router was not set or disconnected before using.")
+        guard let reference = myRouter else {
+            assertionFailure("💥💥💥 Router was not set or disconnected before using.")
             return nil
         }
         return reference
     }
 
+    // MARK: - Dependencies
+
+    private(set) var integrator: ___VARIABLE_moduleName___AbstractIntegrator!
+
+    private(set) var presenter: ___VARIABLE_moduleName___PresenterProtocol!
+
+    // MARK: - Dependency Injections
+
+    /// Internal
+    func setPresenter(_ presenter: ___VARIABLE_moduleName___PresenterProtocol) {
+        self.presenter = presenter
+    }
+
+    /// Public
+
     public func inject(integrator: ___VARIABLE_moduleName___AbstractIntegrator) {
         self.integrator = integrator
     }
 
-    func setPresenter(_ presenter: ___VARIABLE_moduleName___PresenterProtocol) {
-        self.presenter = presenter
+    // MARK: - Input
+
+    // MARK: - Lifecycle
+
+    init(customView: UIView) {
+        self.customView = customView
+        super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -79,6 +90,12 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
 
         activateView()
     }
+
+    // MARK: - Privates
+
+    private var customView: UIView?
 }
+
+// MARK: - ActionDelegate
 
 extension ___VARIABLE_moduleName___ViewController: ___VARIABLE_moduleName___ViewActionDelegate {}

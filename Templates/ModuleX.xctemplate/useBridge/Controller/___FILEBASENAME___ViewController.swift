@@ -11,12 +11,10 @@ import UIKit
 import ViewStateCore
 
 final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIABLE_moduleName___ControllerBridgeProtocol, ___VARIABLE_moduleName___ModuleInterface {
+    // MARK: - In/Out
+
 	private var myOutput: ___VARIABLE_moduleName___OutputProtocol?
     private var myRouter: ___VARIABLE_moduleName___RouterProtocol?
-
-    private(set) var integrator: ___VARIABLE_moduleName___AbstractIntegrator!
-
-    private(set) var dependencyBridge: ___VARIABLE_moduleName___DependencyBridge!
 
     public func connect(output: ___VARIABLE_moduleName___OutputProtocol) {
         self.myOutput = output
@@ -42,13 +40,27 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
         return reference
     }
 
-    public func inject(integrator: ___VARIABLE_moduleName___AbstractIntegrator) {
-    	self.integrator = integrator
-    }
+    // MARK: - Dependencies
 
+    private(set) var dependencyBridge: ___VARIABLE_moduleName___DependencyBridge!
+
+    private(set) var integrator: ___VARIABLE_moduleName___AbstractIntegrator!
+
+    // MARK: - Dependency Injections
+
+    /// Internal
     func setDependencyBridge(_ bridge: ___VARIABLE_moduleName___DependencyBridge) {
         self.dependencyBridge = bridge
     }
+
+    /// Public
+    public func inject(integrator: ___VARIABLE_moduleName___AbstractIntegrator) {
+        self.integrator = integrator
+    }
+
+    // MARK: - Input
+
+    // MARK: - Lifecycle
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +72,10 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
 
         activateView()
     }
+
+    // MARK: - Privates
 }
+
+// MARK: - ActionDelegate
 
 extension ___VARIABLE_moduleName___ViewController: ___VARIABLE_moduleName___ViewActionDelegate {}
