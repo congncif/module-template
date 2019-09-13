@@ -80,6 +80,8 @@ protocol ___VARIABLE_moduleName___PresenterProtocol {
 
     var dataLoadingHandler: LoadingProtocol! { get }
     var dataResponseHandler: DataProcessor<___VARIABLE_moduleName___ResponseModel> { get }
+
+    func openConnectionToView(_ view: ___VARIABLE_moduleName___ViewProtocol)
 }
 
 /// Use for Segue Routing only

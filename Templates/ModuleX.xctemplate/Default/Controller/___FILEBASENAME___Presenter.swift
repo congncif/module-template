@@ -28,6 +28,14 @@ final class ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___Present
 
     weak var actionDelegate: ___VARIABLE_moduleName___ViewActionDelegate?
     var dataLoadingHandler: LoadingProtocol!
+
+    func openConnectionToView(_ view: ___VARIABLE_moduleName___ViewProtocol) {
+        if let viewObject = view as? ViewStateSubscriberObject {
+            state.register(subscriberObject: viewObject) // weak reference
+        } else {
+            state.register(subscriber: view)
+        }
+    }
 }
 
 extension ___VARIABLE_moduleName___Presenter {

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import ViewStateCore
 
-final class ___VARIABLE_moduleName___NavigationView: NSObject {
+final class ___VARIABLE_moduleName___NavigationView: NSObject, ___VARIABLE_moduleName___ViewProtocol {
 	weak var actionDelegate: ___VARIABLE_moduleName___ViewActionDelegate?
     
     @IBOutlet weak var navigationItem: UINavigationItem!

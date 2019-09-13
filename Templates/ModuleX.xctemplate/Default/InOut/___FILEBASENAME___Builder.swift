@@ -25,7 +25,7 @@ public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Builder
 
         let viewController = ___VARIABLE_moduleName___ViewController(customView: contentView)
 
-        let navigationView = ___VARIABLE_moduleName___NavigationView()
+        var navigationView = ___VARIABLE_moduleName___NavigationView()
         navigationView.navigationItem = viewController.navigationItem
 
         var presenter = ___VARIABLE_moduleName___Presenter()
@@ -36,8 +36,8 @@ public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Builder
         presenter.add(errorHandler: viewController.asErrorHandler())
         presenter.dataLoadingHandler = contentView.asLoadingHandler()
 
-        presenter.state.register(subscriberObject: contentView)
-        presenter.state.register(subscriberObject: navigationView, retain: true)
+        presenter.openConnectionToView(contentView)
+        presenter.openConnectionToView(navigationView)
 
         contentView.actionDelegate = viewController
         navigationView.actionDelegate = viewController

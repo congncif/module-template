@@ -36,8 +36,8 @@ final class ___VARIABLE_moduleName___Bridge: NSObject, ___VARIABLE_moduleName___
         myPresenter.add(errorHandler: viewController.asErrorHandler())
         myPresenter.dataLoadingHandler = contentView.asLoadingHandler()
 
-        myPresenter.state.register(subscriberObject: contentView)
-        myPresenter.state.register(subscriberObject: navigationView)
+        myPresenter.openConnectionToView(contentView)
+        myPresenter.openConnectionToView(navigationView)
 
         navigationView.actionDelegate = viewController
         contentView.actionDelegate = viewController
