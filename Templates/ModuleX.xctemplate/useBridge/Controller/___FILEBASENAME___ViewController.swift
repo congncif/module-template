@@ -24,7 +24,7 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
         self.myRouter = router
     }
 
-     public var output: ___VARIABLE_moduleName___OutputProtocol? {
+    var output: ___VARIABLE_moduleName___OutputProtocol? {
         guard let reference = myOutput else {
             assertionFailure("💥💥💥 Output was not set or disconnected before using.")
             return nil
@@ -32,7 +32,7 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
         return reference
     }
 
-    public var router: ___VARIABLE_moduleName___RouterProtocol? {
+    var router: ___VARIABLE_moduleName___RouterProtocol? {
         guard let reference = myRouter else {
             assertionFailure("💥💥💥 Router was not set or disconnected before using.")
             return nil
