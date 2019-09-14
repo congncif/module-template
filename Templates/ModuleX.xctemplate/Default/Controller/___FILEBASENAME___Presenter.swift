@@ -11,23 +11,28 @@ import IDMCore
 import IDMFoundation
 import ViewStateCore
 
-// Properties of ViewState should be protected from outside.
+/// Properties of ViewState should be protected from outside.
+
+// MARK: - Protected State
 
 final class ___VARIABLE_moduleName___ViewState: ViewState {
 //    <#@objc fileprivate(set) dynamic var id: String?#>
 }
 
+// MARK: - Presenter
+
 final class ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___PresenterProtocol, StatefulPresenterProtocol, MultipleErrorHandlingProtocol {
     let state: ___VARIABLE_moduleName___ViewState
     var errorHandlingProxy: ErrorHandlingProxy
+
+    weak var actionDelegate: ___VARIABLE_moduleName___ViewActionDelegate?
+    
+    var dataLoadingHandler: LoadingProtocol!
 
     init(state: ___VARIABLE_moduleName___ViewState = ___VARIABLE_moduleName___ViewState()) {
         self.state = state
         errorHandlingProxy = ErrorHandlingProxy()
     }
-
-    weak var actionDelegate: ___VARIABLE_moduleName___ViewActionDelegate?
-    var dataLoadingHandler: LoadingProtocol!
 
     func openConnectionToView(_ view: ___VARIABLE_moduleName___ViewProtocol) {
         if let viewObject = view as? ViewStateSubscriberObject {
@@ -36,8 +41,19 @@ final class ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___Present
             state.register(subscriber: view)
         }
     }
+
+    /// Original Data
 }
 
-extension ___VARIABLE_moduleName___Presenter {
-    // <#Only change state here#>
-}
+// MARK: - Original Data
+
+extension ___VARIABLE_moduleName___Presenter {}
+
+
+// MARK: - State Accessibilities
+
+extension ___VARIABLE_moduleName___Presenter {}
+
+// MARK: - State Updates
+
+extension ___VARIABLE_moduleName___Presenter {}

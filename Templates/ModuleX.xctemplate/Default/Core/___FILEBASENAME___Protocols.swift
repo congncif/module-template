@@ -33,13 +33,13 @@ extension ___VARIABLE_moduleName___BuilderProtocol {
 
 /// In/Out
 
-// Declare methods come in from outside module
+/// Declare methods come in from outside module
 public protocol ___VARIABLE_moduleName___InputProtocol {}
 
-// Declare methods call back to previous module
+/// Declare methods call back to previous module
 public protocol ___VARIABLE_moduleName___OutputProtocol {}
 
-// Declare methods go out to next module
+/// Declare methods go out to next module
 public protocol ___VARIABLE_moduleName___RouterProtocol {
 	init(sourceModule: ___VARIABLE_moduleName___ModuleInterface)
 }
@@ -65,15 +65,24 @@ protocol ___VARIABLE_moduleName___ControllerProtocol {
     var presenter: ___VARIABLE_moduleName___PresenterProtocol! { get }
     var integrator: ___VARIABLE_moduleName___AbstractIntegrator! { get }
 
-    // Declare methods to work internal module
+    /// Declare methods to work internal module
 }
 
 protocol ___VARIABLE_moduleName___PresenterProtocol {
     var actionDelegate: ___VARIABLE_moduleName___ViewActionDelegate? { get }
     var errorHandler: ErrorHandlingProtocol { get }
 
+    /// Connections
+    func openConnectionToView(_ view: ___VARIABLE_moduleName___ViewProtocol)
+
+    /// Original Data
+
+    /// Data Loading
     var dataLoadingHandler: LoadingProtocol! { get }
+
     var dataResponseHandler: DataProcessor<___VARIABLE_moduleName___ResponseModel> { get }
 
-    func openConnectionToView(_ view: ___VARIABLE_moduleName___ViewProtocol)
+    /// State Accessibilities
+
+    /// State Updates
 }
