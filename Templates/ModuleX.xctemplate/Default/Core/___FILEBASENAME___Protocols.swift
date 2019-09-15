@@ -34,7 +34,7 @@ extension ___VARIABLE_moduleName___BuilderProtocol {
 /// In/Out
 
 /// Declare methods come in from outside module
-public protocol ___VARIABLE_moduleName___InputProtocol {}
+public protocol ___VARIABLE_moduleName___InputProtocol: AnyObject {}
 
 /// Declare methods call back to previous module
 public protocol ___VARIABLE_moduleName___OutputProtocol {}
