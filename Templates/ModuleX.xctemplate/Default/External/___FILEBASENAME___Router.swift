@@ -18,7 +18,7 @@ final class ___VARIABLE_moduleName___Router: Router, ___VARIABLE_moduleName___Ro
     }
 
 //	private struct <#TargetModuleOutputAdapter#>: <#TargetModuleOutputProtocol#> {
-//      weak var output: ___VARIABLE_moduleName___ModuleInterface?
+//      weak var output: ___VARIABLE_moduleName___InputProtocol?
 //  }
 
 	// <#private var nextBuilder: NextModuleBuilderProtocol?#>

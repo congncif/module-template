@@ -92,6 +92,3 @@ protocol ___VARIABLE_moduleName___PresenterProtocol {
 
     /// State Updates
 }
-
-/// Use for Segue Routing only
-protocol ___VARIABLE_moduleName___InternalRouterProtocol {}
