@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 import ViewStateCore
 
-final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIABLE_moduleName___ControllerBridgeProtocol, ___VARIABLE_moduleName___ModuleInterface {
+final class ___VARIABLE_moduleName___Controller: NSObject, ___VARIABLE_moduleName___ControllerProtocol, ___VARIABLE_moduleName___Module, ___VARIABLE_moduleName___InputProtocol {
     // MARK: - In/Out
 
-	private var myOutput: ___VARIABLE_moduleName___OutputProtocol?
+    private var myOutput: ___VARIABLE_moduleName___OutputProtocol?
     private var myRouter: ___VARIABLE_moduleName___RouterProtocol?
 
     public func connect(output: ___VARIABLE_moduleName___OutputProtocol) {
@@ -42,40 +42,26 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
 
     // MARK: - Dependencies
 
-    private(set) var dependencyBridge: ___VARIABLE_moduleName___DependencyBridge!
-
     private(set) var integrator: ___VARIABLE_moduleName___AbstractIntegrator!
+
+    private(set) var presenter: ___VARIABLE_moduleName___PresenterProtocol!
 
     // MARK: - Dependency Injections
 
     /// Internal
-    func setDependencyBridge(_ bridge: ___VARIABLE_moduleName___DependencyBridge) {
-        self.dependencyBridge = bridge
+    func setPresenter(_ presenter: ___VARIABLE_moduleName___PresenterProtocol) {
+        self.presenter = presenter
     }
 
     /// Public
+
     public func inject(integrator: ___VARIABLE_moduleName___AbstractIntegrator) {
         self.integrator = integrator
     }
 
     // MARK: - Input
-
-    // MARK: - Lifecycle
-
-	override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func viewDidFinishInitialLayout() {
-        // Guarantee all mandatory properties must be injected.
-        assert(self.integrator != nil)
-
-        activateView()
-    }
-
-    // MARK: - Privates
 }
 
 // MARK: - ActionDelegate
 
-extension ___VARIABLE_moduleName___ViewController: ___VARIABLE_moduleName___ViewActionDelegate {}
+extension ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___ViewActionDelegate {}

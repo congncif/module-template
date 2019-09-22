@@ -12,14 +12,8 @@ import ViewStateCore
 
 final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIABLE_moduleName___ViewProtocol {
     // MARK: - Controller
-    private(set) var controller: ___VARIABLE_moduleName___Controller!
-
-    func attachController(_ controller: ___VARIABLE_moduleName___Controller) {
-        // Guarantee all mandatory properties must be injected.
-        assert(controller.integrator != nil)
-
-        self.controller = controller
-    }
+    
+    @IBOutlet var controller: ___VARIABLE_moduleName___Controller!
 
     // MARK: - ActionDelegate
 
@@ -27,24 +21,7 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
 
     // MARK: - Lifecycle
 
-    init(customView: UIView) {
-        self.customView = customView
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-
-    override func loadView() {
-        if let customView = customView {
-            view = customView
-        } else {
-            super.loadView()
-        }
-    }
-
-    override func viewDidLoad() {
+	override func viewDidLoad() {
         super.viewDidLoad()
     }
 
@@ -53,8 +30,6 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
     }
 
     // MARK: - Privates
-
-    private var customView: UIView?
 }
 
 extension ___VARIABLE_moduleName___ViewController: DedicatedViewStateFillable {

@@ -32,14 +32,11 @@ public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Builder
 
         let controller = ___VARIABLE_moduleName___Controller()
 
-        viewController.setController(controller)
+        viewController.attachController(controller)
         controller.setPresenter(presenter)
 
         presenter.add(errorHandler: viewController.asErrorHandler())
         presenter.dataLoadingHandler = contentView.asLoadingHandler()
-
-        presenter.openConnectionToView(contentView)
-        presenter.openConnectionToView(navigationView)
 
         viewController.actionDelegate = controller
         presenter.actionDelegate = controller
@@ -58,6 +55,10 @@ public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Builder
         if let delegate = output {
             controller.connect(output: delegate)
         }
+
+        // Connect to show
+        presenter.openConnectionToView(contentView)
+        presenter.openConnectionToView(navigationView)
 
         return viewController
     }

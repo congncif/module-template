@@ -25,14 +25,14 @@ public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Builder
 
         // Inject dependencies
 
-        viewController.inject(integrator: integratorFactory.getIntegrator())
+        viewController.main.inject(integrator: integratorFactory.getIntegrator())
 
         if let router = routerFactory?.getRouter(sourceModule: viewController) {
-            viewController.connect(router: router)
+            viewController.main.connect(router: router)
         }
 
         if let delegate = output {
-            viewController.connect(output: delegate)
+            viewController.main.connect(output: delegate)
         }
         
         return viewController

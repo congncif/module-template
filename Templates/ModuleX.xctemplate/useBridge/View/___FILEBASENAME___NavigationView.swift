@@ -16,6 +16,9 @@ final class ___VARIABLE_moduleName___NavigationView: NSObject, ___VARIABLE_modul
     @IBOutlet weak var navigationItem: UINavigationItem!
 }
 
-extension ___VARIABLE_moduleName___NavigationView: DedicatedViewStateRenderable {
-    func dedicatedRender(state: ___VARIABLE_moduleName___ViewState) {}
+extension ___VARIABLE_moduleName___NavigationView: DedicatedViewStateFillable {
+    func dedicatedFillingOptions(_ state: ___VARIABLE_moduleName___ViewState) -> [FillingOption] {
+        // <#Configure to render View here#>
+        return []
+    }
 }
