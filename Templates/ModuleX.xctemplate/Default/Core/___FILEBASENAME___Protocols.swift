@@ -14,11 +14,28 @@ import ViewStateCore
 
 /// Come from outside
 
-public protocol ___VARIABLE_moduleName___ModuleInterface: ModuleInterface, ___VARIABLE_moduleName___InputProtocol {
+public protocol ___VARIABLE_moduleName___Module {
     func connect(output: ___VARIABLE_moduleName___OutputProtocol)
     func connect(router: ___VARIABLE_moduleName___RouterProtocol)
 
     func inject(integrator: ___VARIABLE_moduleName___AbstractIntegrator)
+}
+
+public protocol ___VARIABLE_moduleName___ModuleInterface: ModuleInterface {
+    var main: ___VARIABLE_moduleName___Module { get }
+    var input: ___VARIABLE_moduleName___InputProtocol { get }
+}
+
+extension ___VARIABLE_moduleName___ModuleInterface where Self: ___VARIABLE_moduleName___Module {
+    public var main: ___VARIABLE_moduleName___Module { 
+        return self
+    }
+}
+
+extension ___VARIABLE_moduleName___ModuleInterface where Self: ___VARIABLE_moduleName___InputProtocol {
+    public var input: ___VARIABLE_moduleName___InputProtocol { 
+        return self
+    }
 }
 
 public protocol ___VARIABLE_moduleName___BuilderProtocol {

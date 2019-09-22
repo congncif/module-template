@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import ViewStateCore
 
-final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIABLE_moduleName___ControllerProtocol, ___VARIABLE_moduleName___ModuleInterface {
+final class ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___ControllerProtocol, ___VARIABLE_moduleName___Module, ___VARIABLE_moduleName___InputProtocol {
     // MARK: - In/Out
 
     private var myOutput: ___VARIABLE_moduleName___OutputProtocol?
@@ -60,42 +60,8 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
     }
 
     // MARK: - Input
-
-    // MARK: - Lifecycle
-
-    init(customView: UIView) {
-        self.customView = customView
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-
-    override func loadView() {
-        if let customView = customView {
-            view = customView
-        } else {
-            super.loadView()
-        }
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func viewDidFinishInitialLayout() {
-        // Guarantee all mandatory properties must be injected.
-        assert(self.integrator != nil)
-
-        activateView()
-    }
-
-    // MARK: - Privates
-
-    private var customView: UIView?
 }
 
 // MARK: - ActionDelegate
 
-extension ___VARIABLE_moduleName___ViewController: ___VARIABLE_moduleName___ViewActionDelegate {}
+extension ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___ViewActionDelegate {}

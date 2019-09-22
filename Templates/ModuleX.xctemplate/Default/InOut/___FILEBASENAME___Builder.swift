@@ -30,29 +30,33 @@ public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Builder
 
         var presenter = ___VARIABLE_moduleName___Presenter()
 
-        viewController.setPresenter(presenter)
+        let controller = ___VARIABLE_moduleName___Controller()
 
-        presenter.actionDelegate = viewController
+        viewController.setController(controller)
+        controller.setPresenter(presenter)
+
         presenter.add(errorHandler: viewController.asErrorHandler())
         presenter.dataLoadingHandler = contentView.asLoadingHandler()
 
         presenter.openConnectionToView(contentView)
         presenter.openConnectionToView(navigationView)
 
-        contentView.actionDelegate = viewController
-        navigationView.actionDelegate = viewController
+        viewController.actionDelegate = controller
+        presenter.actionDelegate = controller
+        contentView.actionDelegate = controller
+        navigationView.actionDelegate = controller
 
         // Inject dependencies
 
-        viewController.inject(integrator: integratorFactory.getIntegrator())
+        controller.inject(integrator: integratorFactory.getIntegrator())
 
         if let routerFactory = self.routerFactory {
         	let router = routerFactory.getRouter(sourceModule: viewController)
-        	viewController.connect(router: router)
+        	controller.connect(router: router)
         }
 
         if let delegate = output {
-            viewController.connect(output: delegate)
+            controller.connect(output: delegate)
         }
 
         return viewController

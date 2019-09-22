@@ -16,6 +16,9 @@ struct ___VARIABLE_moduleName___NavigationView: ___VARIABLE_moduleName___ViewPro
 	weak var navigationItem: UINavigationItem!
 }
 
-extension ___VARIABLE_moduleName___NavigationView: DedicatedViewStateRenderable {
-    func dedicatedRender(state: ___VARIABLE_moduleName___ViewState) {}
+extension ___VARIABLE_moduleName___NavigationView: DedicatedViewStateFillable {
+    func dedicatedFillingOptions(_ state: ___VARIABLE_moduleName___ViewState) -> [FillingOption] {
+        // <#Configure to render View here#>
+        return []
+    }
 }
