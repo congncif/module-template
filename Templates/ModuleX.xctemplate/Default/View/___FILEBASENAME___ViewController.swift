@@ -46,10 +46,8 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
 
-    override func viewDidFinishInitialLayout() {
-        actionDelegate?.activateView()
+        actionDelegate?.activate()
     }
 
     // MARK: - Privates

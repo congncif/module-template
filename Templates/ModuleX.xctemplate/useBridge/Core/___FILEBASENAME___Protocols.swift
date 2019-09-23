@@ -74,7 +74,7 @@ public protocol ___VARIABLE_moduleName___RouterFactoryType {
 /// Internal
 
 protocol ___VARIABLE_moduleName___ViewActionDelegate: AnyObject {
-    func activateView()
+    func activate()
 }
 
 protocol ___VARIABLE_moduleName___ViewProtocol: ViewStateSubscriber {

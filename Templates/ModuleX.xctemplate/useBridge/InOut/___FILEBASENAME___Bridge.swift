@@ -27,13 +27,14 @@ final class ___VARIABLE_moduleName___Bridge: NSObject {
 
         controller.setPresenter(myPresenter)
 
+        myPresenter.actionDelegate = controller
+        viewController.actionDelegate = controller
+
         viewController.loadViewIfNeeded()
 
         myPresenter.add(errorHandler: viewController.asErrorHandler())
         myPresenter.dataLoadingHandler = contentView.asLoadingHandler()
-
-        myPresenter.actionDelegate = controller
-        viewController.actionDelegate = controller
+        
         navigationView.actionDelegate = controller
         contentView.actionDelegate = controller
 

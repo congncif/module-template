@@ -35,14 +35,6 @@ public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Builder
         viewController.attachController(controller)
         controller.setPresenter(presenter)
 
-        presenter.add(errorHandler: viewController.asErrorHandler())
-        presenter.dataLoadingHandler = contentView.asLoadingHandler()
-
-        viewController.actionDelegate = controller
-        presenter.actionDelegate = controller
-        contentView.actionDelegate = controller
-        navigationView.actionDelegate = controller
-
         // Inject dependencies
 
         controller.inject(integrator: integratorFactory.getIntegrator())
@@ -55,6 +47,14 @@ public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Builder
         if let delegate = output {
             controller.connect(output: delegate)
         }
+
+        viewController.actionDelegate = controller
+        presenter.actionDelegate = controller
+        contentView.actionDelegate = controller
+        navigationView.actionDelegate = controller
+
+        presenter.add(errorHandler: viewController.asErrorHandler())
+        presenter.dataLoadingHandler = contentView.asLoadingHandler()
 
         // Connect to show
         presenter.openConnectionToView(contentView)
