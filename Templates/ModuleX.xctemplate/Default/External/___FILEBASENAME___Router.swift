@@ -17,6 +17,10 @@ final class ___VARIABLE_moduleName___Router: Router, ___VARIABLE_moduleName___Ro
     	self.sourceModule = sourceModule
     }
 
+    func backToPrevious() {
+        sourceModule?.userInterface.backToPrevious()
+    }
+
 //	private struct <#TargetModuleOutputAdapter#>: <#TargetModuleOutputProtocol#> {
 //      weak var output: ___VARIABLE_moduleName___InputProtocol?
 //  }

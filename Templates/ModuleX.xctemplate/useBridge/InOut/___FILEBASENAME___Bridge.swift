@@ -41,5 +41,9 @@ final class ___VARIABLE_moduleName___Bridge: NSObject {
         // Connect to show
         myPresenter.openConnectionToView(contentView)
         myPresenter.openConnectionToView(navigationView)
+
+        // Connect internal router
+        let router = ___VARIABLE_moduleName___Router(sourceModule: viewController)
+        controller.connect(router: router)
     }
 }

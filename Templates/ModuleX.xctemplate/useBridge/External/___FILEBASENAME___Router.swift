@@ -15,6 +15,10 @@ struct ___VARIABLE_moduleName___Router: ___VARIABLE_moduleName___RouterProtocol 
     init(sourceModule: ___VARIABLE_moduleName___ModuleInterface) {
         self.sourceModule = sourceModule
     }
+
+    func backToPrevious() {
+        sourceModule?.userInterface.backToPrevious()
+    }
 }
 
 struct ___VARIABLE_moduleName___RouterFactory: ___VARIABLE_moduleName___RouterFactoryType {

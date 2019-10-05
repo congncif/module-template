@@ -65,6 +65,8 @@ public protocol ___VARIABLE_moduleName___OutputProtocol {}
 /// Declare methods go out to next module
 public protocol ___VARIABLE_moduleName___RouterProtocol {
     init(sourceModule: ___VARIABLE_moduleName___ModuleInterface)
+
+    func backToPrevious()
 }
 
 public protocol ___VARIABLE_moduleName___RouterFactoryType {
