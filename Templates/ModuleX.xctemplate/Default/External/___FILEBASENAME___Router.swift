@@ -35,9 +35,7 @@ final class ___VARIABLE_moduleName___Router: Router, ___VARIABLE_moduleName___Ro
 }
 
 struct ___VARIABLE_moduleName___RouterFactory: ___VARIABLE_moduleName___RouterFactoryType {
-	init() {
-
-	}
+	init() {}
 
 	func getRouter(sourceModule: ___VARIABLE_moduleName___ModuleInterface) -> ___VARIABLE_moduleName___RouterProtocol {
 		let router = ___VARIABLE_moduleName___Router(sourceModule: sourceModule)

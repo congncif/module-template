@@ -14,7 +14,7 @@ import ViewStateCore
 
 /// Come from outside
 
-public protocol ___VARIABLE_moduleName___Module {
+public protocol ___VARIABLE_moduleName___Module: ___VARIABLE_moduleName___InputProtocol {
     func connect(output: ___VARIABLE_moduleName___OutputProtocol)
     func connect(router: ___VARIABLE_moduleName___RouterProtocol)
 
@@ -22,18 +22,13 @@ public protocol ___VARIABLE_moduleName___Module {
 }
 
 public protocol ___VARIABLE_moduleName___ModuleInterface: ModuleInterface {
-    var main: ___VARIABLE_moduleName___Module { get }
-    var input: ___VARIABLE_moduleName___InputProtocol { get }
+    var moduleController: ___VARIABLE_moduleName___Module { get }
+
+    func pair(with moduleController: ___VARIABLE_moduleName___Module)
 }
 
 extension ___VARIABLE_moduleName___ModuleInterface where Self: ___VARIABLE_moduleName___Module {
-    public var main: ___VARIABLE_moduleName___Module { 
-        return self
-    }
-}
-
-extension ___VARIABLE_moduleName___ModuleInterface where Self: ___VARIABLE_moduleName___InputProtocol {
-    public var input: ___VARIABLE_moduleName___InputProtocol { 
+    public var moduleController: ___VARIABLE_moduleName___Module {
         return self
     }
 }

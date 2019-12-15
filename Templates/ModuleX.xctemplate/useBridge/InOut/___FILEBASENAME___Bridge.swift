@@ -26,8 +26,8 @@ final class ___VARIABLE_moduleName___Bridge: NSObject {
         super.awakeFromNib()
 
         controller.setPresenter(myPresenter)
-
         myPresenter.actionDelegate = controller
+        viewController.pair(with: controller)
         viewController.actionDelegate = controller
 
         viewController.loadViewIfNeeded()

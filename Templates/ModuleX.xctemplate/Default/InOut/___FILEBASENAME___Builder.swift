@@ -32,7 +32,7 @@ public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Builder
 
         let controller = ___VARIABLE_moduleName___Controller()
 
-        viewController.attachController(controller)
+        viewController.pair(with: controller)
         controller.setPresenter(presenter)
 
         // Inject dependencies

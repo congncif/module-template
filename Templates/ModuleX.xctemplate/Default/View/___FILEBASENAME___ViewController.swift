@@ -10,15 +10,19 @@ import Foundation
 import UIKit
 import ViewStateCore
 
-final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIABLE_moduleName___ViewProtocol {
+final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIABLE_moduleName___ModuleInterface, ___VARIABLE_moduleName___ViewProtocol {
     // MARK: - Controller
-    private(set) var controller: ___VARIABLE_moduleName___Controller!
+    private var myModuleController: ___VARIABLE_moduleName___Module!
 
-    func attachController(_ controller: ___VARIABLE_moduleName___Controller) {
-        // Guarantee all mandatory properties must be injected.
-        assert(controller.integrator != nil)
+    public func pair(with moduleController: ___VARIABLE_moduleName___Module) {
+        self.myModuleController = moduleController
+    }
 
-        self.controller = controller
+    public var moduleController: ___VARIABLE_moduleName___Module {
+        if myModuleController == nil {
+            assertionFailure("💥💥💥 ModuleController was not set before using.")
+        }
+        return myModuleController
     }
 
     // MARK: - ActionDelegate
