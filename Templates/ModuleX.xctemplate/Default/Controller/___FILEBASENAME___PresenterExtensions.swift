@@ -10,12 +10,6 @@ import Foundation
 import IDMCore
 import IDMFoundation
 
-/* Always put most application logics into extensions of protocol */
-
-// MARK: - Controller
-
-extension ___VARIABLE_moduleName___ControllerProtocol {}
-
 // MARK: - Presenter
 
 extension ___VARIABLE_moduleName___PresenterProtocol {

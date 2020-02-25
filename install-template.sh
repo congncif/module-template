@@ -75,4 +75,15 @@ cp -R Templates/ModuleX.xctemplate ~/Library/Developer/Xcode/Templates/Project\ 
 
 
 
+temp_dir=~/Library/Developer/Xcode/Templates/File\ Templates/TestableViewController.xctemplate
+if [ -d "$temp_dir" ] 
+then
+	rm -rf "$temp_dir"
+	echo "Updating TestableViewController template exists..."
+fi
+
+cp -R Templates/TestableViewController.xctemplate ~/Library/Developer/Xcode/Templates/File\ Templates
+
+
+
 echo "${green}Installed IDM-Foundation.xctemplate successfully${reset}"
