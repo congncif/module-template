@@ -14,6 +14,5 @@ extension ___VARIABLE_moduleName___DataModel: Mappable {
         self.init()
     }
     
-    public mutating func mapping(map: Map) {
-    }
+    public mutating func mapping(map: Map) {}
 }

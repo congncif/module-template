@@ -50,6 +50,7 @@
 				<string>BaseDataProvider</string>
 				<string>BaseUploadProvider</string>
 				<string>BaseDownloadProvider</string>
+				<string>AbstractDataProvider</string>
 			</array>
 		</dict>
 	</array>
