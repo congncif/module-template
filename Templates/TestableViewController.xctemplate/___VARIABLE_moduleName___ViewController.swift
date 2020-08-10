@@ -1,19 +1,20 @@
 //
 //  ___VARIABLE_moduleName___ViewController.swift
-//  SuperProject
+//  ___PROJECTNAME___
 //
-//  Created by NGUYEN CHI CONG on 2/9/20.
-//  Copyright © 2020 [iF] Solution. All rights reserved.
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  ___COPYRIGHT___
 //
 
-import IDMFoundation
 import UIKit
 import ViewStateCore
 
-final class ___VARIABLE_moduleName___ViewController: UIViewController {
+final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIABLE_moduleName___Controller {
     // MARK: Dependencies
 
-    let state: ___VARIABLE_moduleName___ViewState = ___VARIABLE_moduleName___ViewState()
+    weak var delegate: ___VARIABLE_moduleName___Delegate?
+
+    lazy var state: ___VARIABLE_moduleName___ViewState = ___VARIABLE_moduleName___ViewState()
 
     // MARK: LifeCycle
 

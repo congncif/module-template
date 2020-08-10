@@ -1,9 +1,9 @@
 //
 //  ___VARIABLE_moduleName___ViewState.swift
-//  SuperProject
+//  ___PROJECTNAME___
 //
-//  Created by NGUYEN CHI CONG on 2/9/20.
-//  Copyright © 2020 [iF] Solution. All rights reserved.
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  ___COPYRIGHT___
 //
 
 import Foundation
