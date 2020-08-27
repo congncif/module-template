@@ -1,5 +1,5 @@
 //
-//  ___VARIABLE_moduleName___ViewController.swift
+//  ___VARIABLE_moduleName___Protocols.swift
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
