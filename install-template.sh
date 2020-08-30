@@ -73,7 +73,9 @@ fi
 
 cp -R Templates/ModuleX.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
 
-
+##############################################################################################
+# INSTALL TESTABLE VIEW CONTROLLER
+##############################################################################################
 
 temp_dir=~/Library/Developer/Xcode/Templates/File\ Templates/TestableViewController.xctemplate
 if [ -d "$temp_dir" ] 
@@ -84,6 +86,31 @@ fi
 
 cp -R Templates/TestableViewController.xctemplate ~/Library/Developer/Xcode/Templates/File\ Templates
 
+##############################################################################################
+# INSTALL BOARDY
+##############################################################################################
+
+temp_dir=~/Library/Developer/Xcode/Templates/File\ Templates/Boardy.xctemplate
+if [ -d "$temp_dir" ] 
+then
+	rm -rf "$temp_dir"
+	echo "Updating Boardy template exists..."
+fi
+
+cp -R Templates/Boardy.xctemplate ~/Library/Developer/Xcode/Templates/File\ Templates
+
+##############################################################################################
+# INSTALL UIBOARDY
+##############################################################################################
+
+temp_dir=~/Library/Developer/Xcode/Templates/File\ Templates/UIBoardy.xctemplate
+if [ -d "$temp_dir" ] 
+then
+	rm -rf "$temp_dir"
+	echo "Updating UIBoardy template exists..."
+fi
+
+cp -R Templates/UIBoardy.xctemplate ~/Library/Developer/Xcode/Templates/File\ Templates
 
 
 echo "${green}Installed IDM-Foundation.xctemplate successfully${reset}"
