@@ -9,7 +9,7 @@
 import Foundation
 
 //****************************************************************************//
-/// Copy this protocol to ___VARIABLE_targetName___ component then make the component conforms it.
+/// Copy this protocol to ___VARIABLE_targetName___ component then make the component conform it.
 protocol ___VARIABLE_targetName___Acceptable: AnyObject {
     func accept()
 }
