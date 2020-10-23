@@ -35,12 +35,12 @@ final class ___VARIABLE_moduleName___CompositeAdapter: ___VARIABLE_moduleName___
     private var adapters: [___VARIABLE_targetName___AcceptAdapter] = []
 
     func connect(adapter: ___VARIABLE_targetName___AcceptAdapter) {
+        adapters.removeAll { $0.target == nil }
         adapters.append(adapter)
     }
 
     func send() {
-        let newAdapters = adapters.filter { $0.target != nil }
-        adapters = newAdapters
-        newAdapters.forEach { $0.send() }
+        adapters.removeAll { $0.target == nil }
+        adapters.forEach { $0.send() }
     }
 }
