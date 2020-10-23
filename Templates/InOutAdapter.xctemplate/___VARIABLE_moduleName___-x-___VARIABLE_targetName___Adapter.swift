@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol ___VARIABLE_moduleName___Sendable {
-    func send()
-}
-
 //****************************************************************************//
 /// Copy this protocol to ___VARIABLE_targetName___ component then make the component conforms it.
 protocol ___VARIABLE_targetName___Acceptable: AnyObject {
@@ -19,19 +15,19 @@ protocol ___VARIABLE_targetName___Acceptable: AnyObject {
 }
 //****************************************************************************//
 
+protocol ___VARIABLE_moduleName___Sendable {
+    func send()
+}
+
 final class ___VARIABLE_targetName___AcceptAdapter: ___VARIABLE_moduleName___Sendable {
-    weak var destination: ___VARIABLE_targetName___Acceptable?
+    weak var target: ___VARIABLE_targetName___Acceptable?
 
-    init(destination: ___VARIABLE_targetName___Acceptable?) {
-        self.destination = destination
-    }
-
-    var target: AnyObject? {
-        return destination
+    init(target: ___VARIABLE_targetName___Acceptable?) {
+        self.target = target
     }
 
     func send() {
-        destination?.accept()
+        target?.accept()
     }
 }
 
