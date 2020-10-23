@@ -11,24 +11,10 @@ then
 	mkdir -p "$app_dir"
     echo "Creating new version of IDM template..."
 fi
-temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/IDM\ Foundation.xctemplate
-if [ -d "$temp_dir" ] 
-then
-	rm -rf "$temp_dir"
-	echo "Removed deprecated version of IDM xctemplate"
-fi
 
-
-
-temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/Module.xctemplate
-if [ -d "$temp_dir" ] 
-then
-	rm -rf "$temp_dir"
-	echo "Updating Module template exists..."
-fi
-
-# cp -R Templates/Module.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
-
+##############################################################################################
+# INSTALL IDMCore
+##############################################################################################
 
 
 temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/IDMCore.xctemplate
@@ -41,27 +27,9 @@ fi
 cp -R Templates/IDMCore.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
 
 
-
-temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/Dependency\ Bridge.xctemplate
-if [ -d "$temp_dir" ] 
-then
-	rm -rf "$temp_dir"
-	echo "Updating Dependency Bridge template exists..."
-fi
-
-# cp -R Templates/Dependency\ Bridge.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
-
-
-
-temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/Segue\ Router.xctemplate
-if [ -d "$temp_dir" ] 
-then
-	rm -rf "$temp_dir"
-	echo "Updating Segue Router template exists..."
-fi
-
-# cp -R Templates/Segue\ Router.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
-
+##############################################################################################
+# INSTALL MODULE X
+##############################################################################################
 
 
 temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/ModuleX.xctemplate
@@ -77,40 +45,40 @@ cp -R Templates/ModuleX.xctemplate ~/Library/Developer/Xcode/Templates/Project\ 
 # INSTALL TESTABLE VIEW CONTROLLER
 ##############################################################################################
 
-temp_dir=~/Library/Developer/Xcode/Templates/File\ Templates/TestableViewController.xctemplate
+temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/TestableViewController.xctemplate
 if [ -d "$temp_dir" ] 
 then
 	rm -rf "$temp_dir"
 	echo "Updating TestableViewController template exists..."
 fi
 
-cp -R Templates/TestableViewController.xctemplate ~/Library/Developer/Xcode/Templates/File\ Templates
+cp -R Templates/TestableViewController.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
 
 ##############################################################################################
 # INSTALL BOARDY
 ##############################################################################################
 
-temp_dir=~/Library/Developer/Xcode/Templates/File\ Templates/Boardy.xctemplate
+temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/Boardy.xctemplate
 if [ -d "$temp_dir" ] 
 then
 	rm -rf "$temp_dir"
 	echo "Updating Boardy template exists..."
 fi
 
-cp -R Templates/Boardy.xctemplate ~/Library/Developer/Xcode/Templates/File\ Templates
+cp -R Templates/Boardy.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
 
 ##############################################################################################
-# INSTALL UIBOARDY
+# INSTALL ADAPTER
 ##############################################################################################
 
-temp_dir=~/Library/Developer/Xcode/Templates/File\ Templates/UIBoardy.xctemplate
+temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/InOutAdapter.xctemplate
 if [ -d "$temp_dir" ] 
 then
 	rm -rf "$temp_dir"
-	echo "Updating UIBoardy template exists..."
+	echo "Updating InOutAdapter template exists..."
 fi
 
-cp -R Templates/UIBoardy.xctemplate ~/Library/Developer/Xcode/Templates/File\ Templates
+cp -R Templates/InOutAdapter.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
 
 
-echo "${green}Installed IDM-Foundation.xctemplate successfully${reset}"
+echo "${green}Installed xctemplate successfully${reset}"
