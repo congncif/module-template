@@ -22,6 +22,7 @@ final class ___VARIABLE_moduleName___Board: Board, GuaranteedBoard {
 
     func activate(withGuaranteedInput input: <#InputType#>) {
         let viewController = builder.build()
+        viewController.delegate = self
         rootViewController.show(viewController)
     }
 }
