@@ -8,7 +8,6 @@
 
 import Foundation
 import IDMCore
-import IDMFoundation
 
 // MARK: - Presenter
 
@@ -20,7 +19,7 @@ extension ___VARIABLE_moduleName___PresenterProtocol {
     }
 }
 
-extension ___VARIABLE_moduleName___PresenterProtocol where Self: MultipleErrorHandlingProtocol {
+extension ___VARIABLE_moduleName___PresenterProtocol where Self: CompoundErrorHandling {
     var errorHandler: ErrorHandlingProtocol {
         return errorHandlingProxy
     }

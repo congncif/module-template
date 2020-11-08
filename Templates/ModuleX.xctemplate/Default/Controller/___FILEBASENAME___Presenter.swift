@@ -8,7 +8,6 @@
 
 import Foundation
 import IDMCore
-import IDMFoundation
 import ViewStateCore
 
 /// Properties of ViewState should be protected from outside.
@@ -21,7 +20,7 @@ final class ___VARIABLE_moduleName___ViewState: ViewState {
 
 // MARK: - Presenter
 
-final class ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___PresenterProtocol, StatefulPresenterProtocol, MultipleErrorHandlingProtocol {
+final class ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___PresenterProtocol, CompoundErrorHandling {
     let state: ___VARIABLE_moduleName___ViewState
     var errorHandlingProxy: ErrorHandlingProxy
 

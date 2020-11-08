@@ -8,7 +8,6 @@
 
 import Foundation
 import IDMCore
-import IDMFoundation
 import ModuleX
 import ViewStateCore
 

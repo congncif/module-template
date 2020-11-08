@@ -8,7 +8,6 @@
 
 import Foundation
 import IDMCore
-import IDMFoundation
 
 final class ___VARIABLE_moduleName___Bridge: NSObject {
     private(set) var myPresenter = ___VARIABLE_moduleName___Presenter()
