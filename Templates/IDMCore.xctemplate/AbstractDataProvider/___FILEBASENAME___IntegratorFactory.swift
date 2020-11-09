@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import IDMFoundation
 
 public protocol ___VARIABLE_moduleName___IntegratorFactoryType {
 	func getIntegrator() -> ___VARIABLE_moduleName___AbstractIntegrator
