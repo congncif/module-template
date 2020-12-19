@@ -4,12 +4,10 @@ reset=`tput sgr0`
 
 app_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
 if [ ! -d "$app_dir" ]
-	rm -rf "$app_dir" 
-	mkdir -p "$app_dir"
-	echo "Preparing to update new version of IDM template..."
+	echo "Preparing to update new version of template..."
 then
 	mkdir -p "$app_dir"
-    echo "Creating new version of IDM template..."
+    echo "Creating new version of template..."
 fi
 
 ##############################################################################################
@@ -80,5 +78,21 @@ fi
 
 cp -R Templates/InOutAdapter.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
 
+##############################################################################################
+# INSTALL VIP
+##############################################################################################
+
+temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/VIP.xctemplate
+if [ -d "$temp_dir" ] 
+then
+	rm -rf "$temp_dir"
+	echo "Updating VIP template exists..."
+fi
+
+cp -R Templates/VIP.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
+
+##############################################################################################
+# DONE
+##############################################################################################
 
 echo "${green}Installed xctemplate successfully${reset}"
