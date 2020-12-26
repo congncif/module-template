@@ -8,11 +8,11 @@
 
 import Foundation
 
-public protocol ___VARIABLE_moduleName___IntegratorFactoryType {
+public protocol ___VARIABLE_moduleName___IntegratorFactoryProtocol {
 	func getIntegrator() -> ___VARIABLE_moduleName___AbstractIntegrator
 }
 
-public struct ___VARIABLE_moduleName___IntegratorFactory: ___VARIABLE_moduleName___IntegratorFactoryType {
+public struct ___VARIABLE_moduleName___IntegratorFactory: ___VARIABLE_moduleName___IntegratorFactoryProtocol {
 	public init() {}
 	
 	public func getIntegrator() -> ___VARIABLE_moduleName___AbstractIntegrator {

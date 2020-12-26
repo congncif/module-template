@@ -11,11 +11,11 @@ import ModuleX
 import SiFUtilities
 
 public struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___BuilderProtocol {
-    private let integratorFactory: ___VARIABLE_moduleName___IntegratorFactoryType
-	private let routerFactory: ___VARIABLE_moduleName___RouterFactoryType?
+    private let integratorFactory: ___VARIABLE_moduleName___IntegratorFactoryProtocol
+	private let routerFactory: ___VARIABLE_moduleName___RouterFactoryProtocol?
 
-	public init(integratorFactory: ___VARIABLE_moduleName___IntegratorFactoryType,
-                routerFactory: ___VARIABLE_moduleName___RouterFactoryType? = nil) {
+	public init(integratorFactory: ___VARIABLE_moduleName___IntegratorFactoryProtocol,
+                routerFactory: ___VARIABLE_moduleName___RouterFactoryProtocol? = nil) {
         self.integratorFactory = integratorFactory
         self.routerFactory = routerFactory
     }

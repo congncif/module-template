@@ -52,16 +52,18 @@ public protocol ___VARIABLE_moduleName___OutputProtocol {}
 
 /// Declare methods go out to next module
 public protocol ___VARIABLE_moduleName___RouterProtocol {
-	init(sourceModule: ___VARIABLE_moduleName___ModuleInterface)
-
     func backToPrevious()
 }
 
-public protocol ___VARIABLE_moduleName___RouterFactoryType {
+public protocol ___VARIABLE_moduleName___RouterFactoryProtocol {
     func getRouter(sourceModule: ___VARIABLE_moduleName___ModuleInterface) -> ___VARIABLE_moduleName___RouterProtocol
 }
 
 /// Internal
+
+protocol ___VARIABLE_moduleName___RouterInternalProtocol: ___VARIABLE_moduleName___RouterProtocol {
+    var sourceModule: ___VARIABLE_moduleName___ModuleInterface? { get }
+}
 
 protocol ___VARIABLE_moduleName___ViewActionDelegate: AnyObject {
     func activate()

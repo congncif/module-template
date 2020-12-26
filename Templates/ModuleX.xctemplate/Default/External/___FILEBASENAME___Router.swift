@@ -9,13 +9,8 @@
 import Foundation
 import ModuleX
 
-final class ___VARIABLE_moduleName___Router: Router, ___VARIABLE_moduleName___RouterProtocol {
-    private weak var sourceModule: ___VARIABLE_moduleName___ModuleInterface?
-
-    init(sourceModule: ___VARIABLE_moduleName___ModuleInterface) {
-    	super.init(defaultSourceModule: sourceModule)
-    	self.sourceModule = sourceModule
-    }
+final class ___VARIABLE_moduleName___Router: Router, ___VARIABLE_moduleName___RouterInternalProtocol {
+	weak var sourceModule: ___VARIABLE_moduleName___ModuleInterface?
 
     func backToPrevious() {
         sourceModule?.userInterface.backToPrevious()
@@ -34,11 +29,12 @@ final class ___VARIABLE_moduleName___Router: Router, ___VARIABLE_moduleName___Ro
 
 }
 
-struct ___VARIABLE_moduleName___RouterFactory: ___VARIABLE_moduleName___RouterFactoryType {
+struct ___VARIABLE_moduleName___RouterFactory: ___VARIABLE_moduleName___RouterFactoryProtocol {
 	init() {}
 
 	func getRouter(sourceModule: ___VARIABLE_moduleName___ModuleInterface) -> ___VARIABLE_moduleName___RouterProtocol {
-		let router = ___VARIABLE_moduleName___Router(sourceModule: sourceModule)
+		let router = ___VARIABLE_moduleName___Router()
+		router.sourceModule = sourceModule
 		return router
 	}
 }

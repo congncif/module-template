@@ -8,6 +8,7 @@
 
 import Foundation
 import IDMCore
+import IDMExtensions
 
 /**
  * Model

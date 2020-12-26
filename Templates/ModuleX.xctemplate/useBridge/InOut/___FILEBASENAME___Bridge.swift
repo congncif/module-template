@@ -11,6 +11,7 @@ import IDMCore
 
 final class ___VARIABLE_moduleName___Bridge: NSObject {
     private(set) var myPresenter = ___VARIABLE_moduleName___Presenter()
+    private let routerFactory = ___VARIABLE_moduleName___RouterFactory()
 
     @IBOutlet private weak var viewController: ___VARIABLE_moduleName___ViewController!
     @IBOutlet private weak var controller: ___VARIABLE_moduleName___Controller!
@@ -42,7 +43,7 @@ final class ___VARIABLE_moduleName___Bridge: NSObject {
         myPresenter.openConnectionToView(navigationView)
 
         // Connect internal router
-        let router = ___VARIABLE_moduleName___Router(sourceModule: viewController)
+        let router = routerFactory.getRouter(sourceModule: viewController)
         controller.connect(router: router)
     }
 }

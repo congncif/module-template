@@ -92,6 +92,32 @@ fi
 cp -R Templates/VIP.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
 
 ##############################################################################################
+# INSTALL VaIP
+##############################################################################################
+
+temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/VaIP.xctemplate
+if [ -d "$temp_dir" ] 
+then
+	rm -rf "$temp_dir"
+	echo "Updating VaIP template exists..."
+fi
+
+cp -R Templates/VaIP.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
+
+##############################################################################################
+# INSTALL BoardComponent
+##############################################################################################
+
+temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/ComponentB.xctemplate
+if [ -d "$temp_dir" ] 
+then
+	rm -rf "$temp_dir"
+	echo "Updating ComponentB template exists..."
+fi
+
+cp -R Templates/ComponentB.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
+
+##############################################################################################
 # DONE
 ##############################################################################################
 
