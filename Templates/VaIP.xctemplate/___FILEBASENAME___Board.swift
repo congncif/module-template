@@ -28,4 +28,8 @@ final class ___VARIABLE_moduleName___Board: Board, GuaranteedBoard {
     }
 }
 
-extension ___VARIABLE_moduleName___Board: ___VARIABLE_moduleName___Delegate {}
+extension ___VARIABLE_moduleName___Board: ___VARIABLE_moduleName___Delegate {
+    func missionCompleted() {
+        complete()
+    }
+}

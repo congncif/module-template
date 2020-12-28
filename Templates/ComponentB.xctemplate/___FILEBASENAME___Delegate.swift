@@ -10,4 +10,5 @@ import Foundation
 
 protocol ___VARIABLE_moduleName___Delegate: AnyObject {
     // Declare methods to to outside components.
+    func missionCompleted()
 }
