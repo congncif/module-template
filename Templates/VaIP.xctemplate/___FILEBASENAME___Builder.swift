@@ -12,7 +12,7 @@ final class ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Buildable
     func build(withDelegate delegate: ___VARIABLE_moduleName___Delegate?) -> ___VARIABLE_moduleName___Interface {
         let presenter = ___VARIABLE_moduleName___Presenter()
         let interactor = ___VARIABLE_moduleName___Interactor(presenter: presenter)
-        let viewAdapter = ___VARIABLE_moduleName___ViewAdapter()
+        let viewAdapter = ___VARIABLE_moduleName___ViewAdapter(interactor: interactor)
 
         presenter.view = viewAdapter
         interactor.delegate = delegate

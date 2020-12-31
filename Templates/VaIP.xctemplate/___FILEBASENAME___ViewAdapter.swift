@@ -12,7 +12,11 @@ import UIKit
 final class ___VARIABLE_moduleName___ViewAdapter: ___VARIABLE_moduleName___UserInterfaceAdapter {
     private weak var associatedViewController: UIViewController?
 
-    init() {}
+    private unowned let interactor: ___VARIABLE_moduleName___Interactable
+
+    init(interactor: ___VARIABLE_moduleName___Interactable) {
+        self.interactor = interactor
+    }
     
     func connect(with associatedViewController: UIViewController?) {
         self.associatedViewController = associatedViewController

@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class ___VARIABLE_moduleName___Interactor {
+final class ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Interactable {
     weak var delegate: ___VARIABLE_moduleName___Delegate?
     
     private let presenter: ___VARIABLE_moduleName___Presentable
