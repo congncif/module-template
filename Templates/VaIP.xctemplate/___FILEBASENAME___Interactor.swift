@@ -16,10 +16,10 @@ final class ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Intera
     init(presenter: ___VARIABLE_moduleName___Presentable) {
         self.presenter = presenter
     }
+}
 
+extension ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Controllable {
     func active() {
         // Start request
     }
 }
-
-extension ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Controllable {}

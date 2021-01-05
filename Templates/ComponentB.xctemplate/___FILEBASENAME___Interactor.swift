@@ -12,10 +12,10 @@ final class ___VARIABLE_moduleName___Interactor {
     weak var delegate: ___VARIABLE_moduleName___Delegate?
 
     init() {}
+}
 
+extension ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Controllable {
     func active() {
         // Start request
     }
 }
-
-extension ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Controllable {}
