@@ -10,5 +10,5 @@ import Foundation
 
 protocol ___VARIABLE_moduleName___Controllable: AnyObject {
     // Declare methods to be called from outside components.
-    func active()
+    func activate()
 }

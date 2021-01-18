@@ -11,9 +11,9 @@ import Foundation
 final class ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___Presentable {
     weak var view: ___VARIABLE_moduleName___Viewable?
 
-    func active(with model: ___VARIABLE_moduleName___Model) {
+    func activate(with model: ___VARIABLE_moduleName___Model) {
         // Map ___VARIABLE_moduleName___Model to ViewModel for View.
-        view?.active(with: ___VARIABLE_moduleName___ViewModel())
+        view?.activate(with: ___VARIABLE_moduleName___ViewModel())
     }
 
     func startProcessing() {

@@ -22,7 +22,7 @@ final class ___VARIABLE_moduleName___Board: Board, GuaranteedBoard {
     }
 
     func activate(withGuaranteedInput input: InputType) {
-        component.controller.active()
+        component.controller.activate()
     }
 }
 

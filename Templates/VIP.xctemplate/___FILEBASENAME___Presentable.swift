@@ -10,7 +10,7 @@ import Foundation
 
 protocol ___VARIABLE_moduleName___Presentable: AnyObject {
     // Declare methods to be called by Interactor.
-    func active(with model: ___VARIABLE_moduleName___Model)
+    func activate(with model: ___VARIABLE_moduleName___Model)
 
     func startProcessing()
     func finishProcessing()

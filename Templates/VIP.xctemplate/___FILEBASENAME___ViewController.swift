@@ -24,15 +24,15 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        interactor.active()
+        interactor.activate()
     }
 
     // MARK: - IBOutlets / IBActions
 }
 
 extension ___VARIABLE_moduleName___ViewController: ___VARIABLE_moduleName___Viewable {
-    func active(with viewModel: ___VARIABLE_moduleName___ViewModel) {
-        // <#active view#>
+    func activate(with viewModel: ___VARIABLE_moduleName___ViewModel) {
+        // <#activate view#>
     }
 
     func startLoadingView() {
