@@ -20,6 +20,6 @@ final class ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Intera
 
 extension ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Controllable {
     func activate() {
-        presenter.active(with: ___VARIABLE_moduleName___Model())
+        presenter.activate(with: ___VARIABLE_moduleName___Model())
     }
 }

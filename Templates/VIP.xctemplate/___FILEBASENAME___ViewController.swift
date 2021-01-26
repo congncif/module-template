@@ -14,7 +14,7 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController {
 
     init(interactor: ___VARIABLE_moduleName___Interactable) {
         self.interactor = interactor
-        super.init(nibName: String(describing: ___VARIABLE_moduleName___ViewController.self), bundle: .shared)
+        super.init(nibName: String(describing: ___VARIABLE_moduleName___ViewController.self), bundle: <#BundleToken.sharedResources#>)
     }
 
     @available(*, unavailable)
