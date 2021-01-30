@@ -19,3 +19,7 @@ extension ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Controll
         // Start request
     }
 }
+
+// MARK: - Private methods
+
+private extension ___VARIABLE_moduleName___Interactor {}

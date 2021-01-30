@@ -23,3 +23,7 @@ extension ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Controll
         presenter.activate(with: ___VARIABLE_moduleName___Model())
     }
 }
+
+// MARK: - Private methods
+
+private extension ___VARIABLE_moduleName___Interactor {}

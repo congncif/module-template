@@ -49,3 +49,7 @@ extension ___VARIABLE_moduleName___ViewController: ___VARIABLE_moduleName___View
         present(alert, animated: true, completion: nil)
     }
 }
+
+// MARK: - Private methods
+
+private extension ___VARIABLE_moduleName___ViewController {}

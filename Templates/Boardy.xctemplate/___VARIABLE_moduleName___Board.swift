@@ -15,14 +15,13 @@ final class ___VARIABLE_moduleName___Board: Board, GuaranteedBoard {
 
     private let builder: ___VARIABLE_moduleName___Buildable
 
-    init(builder: ___VARIABLE_moduleName___Buildable) {
+    init(identifier: <#.___VARIABLE_moduleName___#>, builder: ___VARIABLE_moduleName___Buildable) {
         self.builder = builder
-        super.init(identifier: <#.___VARIABLE_moduleName___#>)
+        super.init(identifier: identifier)
     }
 
     func activate(withGuaranteedInput input: <#InputType#>) {
-        let viewController = builder.build()
-        viewController.delegate = self
+        let viewController = builder.build(withDelegate: self)
         rootViewController.show(viewController)
     }
 }
