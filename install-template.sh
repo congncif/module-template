@@ -118,6 +118,32 @@ fi
 cp -R Templates/ComponentB.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
 
 ##############################################################################################
+# INSTALL VIP-IDM
+##############################################################################################
+
+temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/VIP-IDM.xctemplate
+if [ -d "$temp_dir" ] 
+then
+	rm -rf "$temp_dir"
+	echo "Updating VIP-IDM template exists..."
+fi
+
+cp -R Templates/VIP-IDM.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
+
+##############################################################################################
+# INSTALL VaIP-IDM
+##############################################################################################
+
+temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/VaIP-IDM.xctemplate
+if [ -d "$temp_dir" ] 
+then
+	rm -rf "$temp_dir"
+	echo "Updating VaIP-IDM template exists..."
+fi
+
+cp -R Templates/VaIP-IDM.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
+
+##############################################################################################
 # DONE
 ##############################################################################################
 
