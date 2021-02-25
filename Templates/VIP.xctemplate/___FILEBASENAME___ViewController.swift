@@ -43,7 +43,7 @@ extension ___VARIABLE_moduleName___ViewController: ___VARIABLE_moduleName___View
         // Hide progress animation when processing done
     }
 
-    func showErrorAlert(title: String, message: String, cancelTitle: String) {
+    func showErrorAlert(title: String?, message: String, cancelTitle: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: cancelTitle, style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
