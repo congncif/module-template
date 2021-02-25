@@ -14,14 +14,19 @@ final class ___VARIABLE_moduleName___Board: Board, GuaranteedBoard {
 
     private let builder: ___VARIABLE_moduleName___Buildable
 
-    private lazy var component = builder.build(withDelegate: self)
-
     init(identifier: BoardID = <#.___VARIABLE_moduleName___#>, builder: ___VARIABLE_moduleName___Buildable) {
         self.builder = builder
         super.init(identifier: identifier)
     }
 
     func activate(withGuaranteedInput input: InputType) {
+        if let controller = rootViewController.firstAttachedObject(___VARIABLE_moduleName___Controllable.self) {
+            controller.activate()
+            return
+        }
+        
+        let component = builder.build(withDelegate: self)
+        rootViewController.attachObject(component.controller)
         component.controller.activate()
     }
 }
