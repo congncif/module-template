@@ -20,7 +20,11 @@ final class ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Intera
     func activate() {
         presenter.activate(with: ___VARIABLE_moduleName___Model())
     }
+
+    // MARK: - Private computed & temporary properties
 }
+
+// MARK: - Conformations
 
 extension ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Controllable {}
 

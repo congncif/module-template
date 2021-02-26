@@ -27,6 +27,8 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController {
         interactor.activate()
     }
 
+    // MARK: Private computed & temporary properties
+
     // MARK: IBOutlets / IBActions
 }
 

@@ -16,7 +16,11 @@ final class ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Intera
     init(presenter: ___VARIABLE_moduleName___Presentable) {
         self.presenter = presenter
     }
+
+    // MARK: - Private computed & temporary properties
 }
+
+// MARK: - Conformations
 
 extension ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Controllable {
     func activate() {

@@ -12,7 +12,11 @@ final class ___VARIABLE_moduleName___Interactor {
     weak var delegate: ___VARIABLE_moduleName___Delegate?
 
     init() {}
+
+    // MARK: - Private computed & temporary properties
 }
+
+// MARK: - Conformations
 
 extension ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Controllable {
     func activate() {

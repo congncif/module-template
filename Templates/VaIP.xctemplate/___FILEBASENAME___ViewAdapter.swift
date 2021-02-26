@@ -22,6 +22,8 @@ final class ___VARIABLE_moduleName___ViewAdapter: ___VARIABLE_moduleName___UserI
         self.associatedViewController = associatedViewController
     }
 
+    // MARK: Private computed & temporary properties
+
     fileprivate var viewController: UIViewController {
         associatedViewController ?? {
             assertionFailure("associatedViewController was disconnected")
