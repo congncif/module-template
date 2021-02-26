@@ -27,7 +27,7 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController {
         interactor.activate()
     }
 
-    // MARK: - IBOutlets / IBActions
+    // MARK: IBOutlets / IBActions
 }
 
 extension ___VARIABLE_moduleName___ViewController: ___VARIABLE_moduleName___Viewable {
