@@ -22,7 +22,7 @@ final class ___VARIABLE_moduleName___Board: Board, GuaranteedBoard {
 
     func activate(withGuaranteedInput input: InputType) {
         // Default behaviour is single attaching. Next turn of attaching will detach previous attached same type objects .
-        rootViewController.detachObjects { $0 is ___VARIABLE_moduleName___Controllable }
+        rootViewController.detachObjects(___VARIABLE_moduleName___Controllable.self)
         
         let component = builder.build(withDelegate: self)
         component.adapter.connect(with: rootViewController)
