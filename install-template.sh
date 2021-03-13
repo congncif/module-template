@@ -50,7 +50,8 @@ then
 	echo "Updating TestableViewController template exists..."
 fi
 
-cp -R Templates/TestableViewController.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
+# Move to Boardy -> Remove this template
+# cp -R Templates/TestableViewController.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
 
 ##############################################################################################
 # INSTALL BOARDY
@@ -76,7 +77,8 @@ then
 	echo "Updating InOutAdapter template exists..."
 fi
 
-cp -R Templates/InOutAdapter.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
+# Remove this template
+# cp -R Templates/InOutAdapter.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
 
 ##############################################################################################
 # INSTALL VIP

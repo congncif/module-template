@@ -24,18 +24,14 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
         state.register(subscriberObject: self)
     }
 
-    // MARK: Privates
+    // MARK: Private computed & temporary properties
 
-    // @IBOutlet private weak var
-
-    // @IBAction private func
+    // MARK: IBOutlets / IBActions
 }
 
 // MARK: - Behaviors
 
-extension ___VARIABLE_moduleName___ViewController {
-    // testable func
-}
+extension ___VARIABLE_moduleName___ViewController {}
 
 // MARK: - ViewState
 
@@ -44,3 +40,7 @@ extension ___VARIABLE_moduleName___ViewController: DedicatedViewStateRenderable 
         // handle state changes
     }
 }
+
+// MARK: - Private methods
+
+private extension ___VARIABLE_moduleName___ViewController {}

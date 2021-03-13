@@ -20,7 +20,7 @@ final class ___VARIABLE_moduleName___Board: Board, GuaranteedBoard {
         super.init(identifier: identifier)
     }
 
-    func activate(withGuaranteedInput input: <#InputType#>) {
+    func activate(withGuaranteedInput input: InputType) {
         let viewController = builder.build(withDelegate: self)
         rootViewController.show(viewController)
     }
