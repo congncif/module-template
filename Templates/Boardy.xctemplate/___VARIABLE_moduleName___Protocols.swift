@@ -8,12 +8,10 @@
 
 import UIKit
 
-protocol ___VARIABLE_moduleName___Controller: UIViewController {
-    var delegate: ___VARIABLE_moduleName___Delegate? { get set }
-}
+protocol ___VARIABLE_moduleName___Controller: UIViewController {}
 
 protocol ___VARIABLE_moduleName___Delegate: AnyObject {}
 
 protocol ___VARIABLE_moduleName___Buildable {
-    func build() -> ___VARIABLE_moduleName___Controller
+    func build(withDelegate delegate: ___VARIABLE_moduleName___Delegate?) -> ___VARIABLE_moduleName___Controller
 }
