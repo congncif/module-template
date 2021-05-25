@@ -39,7 +39,7 @@ extension ___VARIABLE_moduleName___Activation: ___VARIABLE_moduleName___Activata
     }
 }
 
-// MARK: - Factory
+// MARK: - Quick Access
 
 extension ActivatableBoard {
     public func <#___VARIABLE_moduleName___#>(identifier: BoardID) -> ___VARIABLE_moduleName___Activatable {
