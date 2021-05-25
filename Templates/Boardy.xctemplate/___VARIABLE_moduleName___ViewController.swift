@@ -1,6 +1,6 @@
 //
 //  ___VARIABLE_moduleName___ViewController.swift
-//  ___PROJECTNAME___
+//  ___TARGETNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  ___COPYRIGHT___
