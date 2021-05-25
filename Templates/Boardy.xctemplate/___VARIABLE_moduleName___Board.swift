@@ -11,11 +11,11 @@ import Foundation
 import UIKit
 
 final class ___VARIABLE_moduleName___Board: Board, GuaranteedBoard {
-	typealias InputType = <#InputType#>
+	typealias InputType = <#Any#>
 
     private let builder: ___VARIABLE_moduleName___Buildable
 
-    init(identifier: BoardID = <#.___VARIABLE_moduleName___#>, builder: ___VARIABLE_moduleName___Buildable) {
+    init(identifier: BoardID, builder: ___VARIABLE_moduleName___Buildable) {
         self.builder = builder
         super.init(identifier: identifier)
     }
