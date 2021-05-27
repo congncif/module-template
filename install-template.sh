@@ -55,6 +55,10 @@ update_template VaIP-IDM
 
 update_template IOInterface
 
+update_template ModuleIntegration
+
+update_template TaskBoard
+
 ##############################################################################################
 # DONE
 ##############################################################################################

@@ -1,5 +1,5 @@
 //
-//  ___VARIABLE_moduleName___ViewState.swift
+//  ___FILENAME___
 //  ___TARGETNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
