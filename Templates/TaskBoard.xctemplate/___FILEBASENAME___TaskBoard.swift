@@ -10,7 +10,7 @@ import Boardy
 import Foundation
 import SiFUtilities
 
-enum ___VARIABLE_moduleName___BoardFactory {
+enum ___VARIABLE_moduleName___TaskBoardFactory {
     static func get(identifier: BoardID) -> ActivatableBoard {
         TaskBoard<<#In#>, <#Out#>>(identifier: identifier) { board, input, completion in
             <#completion#>

@@ -9,6 +9,10 @@
 import Boardy
 import Foundation
 
+// public enum ___VARIABLE_moduleName___Input {}
+
+// public enum ___VARIABLE_moduleName___Output {}
+
 public protocol ___VARIABLE_moduleName___Activatable {
     func activate()
 }
