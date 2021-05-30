@@ -9,7 +9,7 @@
 import Boardy
 import Foundation
 
-struct ___VARIABLE_moduleName___BoardProducer {
+struct ___VARIABLE_moduleName___BoardProducer: ActivableBoardProducer {
     func produceBoard(identifier: BoardID) -> ActivatableBoard? {
         switch identifier {
         default:
