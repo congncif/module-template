@@ -9,12 +9,12 @@
 import Boardy
 import Foundation
 
-// public enum ___VARIABLE_moduleName___Input {}
+public enum ___VARIABLE_moduleName___Input {}
 
-// public enum ___VARIABLE_moduleName___Output {}
+public enum ___VARIABLE_moduleName___Output {}
 
 public protocol ___VARIABLE_moduleName___Activatable {
-    func activate()
+    func activate(with input: ___VARIABLE_moduleName___Input)
 }
 
 // MARK: - Activations
@@ -26,8 +26,8 @@ struct ___VARIABLE_moduleName___MainActivation {
 }
 
 extension ___VARIABLE_moduleName___MainActivation: ___VARIABLE_moduleName___Activatable {
-    func activate() {
-        mainboard.activateBoard(BoardInput(target: identifier))
+    func activate(with input: ___VARIABLE_moduleName___Input) {
+        mainboard.activateBoard(BoardInput(target: identifier, input: input))
     }
 }
 
@@ -38,8 +38,8 @@ struct ___VARIABLE_moduleName___Activation {
 }
 
 extension ___VARIABLE_moduleName___Activation: ___VARIABLE_moduleName___Activatable {
-    func activate() {
-        source.nextToBoard(BoardInput(target: identifier))
+    func activate(with input: ___VARIABLE_moduleName___Input) {
+        source.nextToBoard(BoardInput(target: identifier, input: input))
     }
 }
 
