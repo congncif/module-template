@@ -15,7 +15,9 @@ struct ___VARIABLE_moduleName___ModuleLoader: ModuleLoader {
 
     func load(in container: ModuleContainer) {
         container.registerBoard(identifier) { id in
-            NoBoard(identifier: identifier)
+            let producer = ___VARIABLE_moduleName___BoardProducer()
+            let mainboard = Motherboard(identifier: "<#domain.root.main#>", boardProducer: producer)
+            return RootBoard(identifier: identifier, continuousBoard: mainboard)
         }
     }
 }
