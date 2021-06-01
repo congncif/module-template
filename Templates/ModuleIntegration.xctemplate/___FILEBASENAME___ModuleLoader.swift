@@ -17,7 +17,7 @@ struct ___VARIABLE_moduleName___ModuleLoader: ModuleLoader {
         container.registerBoard(identifier) { id in
             let producer = ___VARIABLE_moduleName___BoardProducer()
             let mainboard = Motherboard(identifier: "<#domain.root.main#>", boardProducer: producer)
-            return RootBoard(identifier: identifier, continuousBoard: mainboard)
+            return RootBoard(identifier: id, continuousBoard: mainboard)
         }
     }
 }
