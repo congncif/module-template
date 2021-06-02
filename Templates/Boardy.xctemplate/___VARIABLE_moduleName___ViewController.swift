@@ -14,14 +14,10 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIAB
 
     weak var delegate: ___VARIABLE_moduleName___Delegate?
 
-    lazy var state: ___VARIABLE_moduleName___ViewState = ___VARIABLE_moduleName___ViewState()
-
     // MARK: LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        state.register(subscriberObject: self)
     }
 
     // MARK: Private computed & temporary properties

@@ -8,10 +8,15 @@
 
 import UIKit
 
-protocol ___VARIABLE_moduleName___Controller: UIViewController {}
+struct ___VARIABLE_moduleName___Interface {
+    let userInterface: UIViewController
+    let controller: ___VARIABLE_moduleName___Controllable
+}
+
+protocol ___VARIABLE_moduleName___Controllable: AnyObject {}
 
 protocol ___VARIABLE_moduleName___Delegate: AnyObject {}
 
 protocol ___VARIABLE_moduleName___Buildable {
-    func build(withDelegate delegate: ___VARIABLE_moduleName___Delegate?) -> ___VARIABLE_moduleName___Controller
+    func build(withDelegate delegate: ___VARIABLE_moduleName___Delegate?) -> ___VARIABLE_moduleName___Interface
 }

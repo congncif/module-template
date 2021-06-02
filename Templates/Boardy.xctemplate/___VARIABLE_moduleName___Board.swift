@@ -11,8 +11,8 @@ import Foundation
 import UIKit
 
 final class ___VARIABLE_moduleName___Board: ContinuousBoard, GuaranteedBoard, GuaranteedOutputSendingBoard {
-	typealias InputType = <#Any#>
-    typealias OutputType = <#Any#>
+	typealias InputType = Any
+    typealias OutputType = Any
 
     private let builder: ___VARIABLE_moduleName___Buildable
 
