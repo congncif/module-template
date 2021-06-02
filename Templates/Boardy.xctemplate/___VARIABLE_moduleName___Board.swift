@@ -23,7 +23,9 @@ final class ___VARIABLE_moduleName___Board: ContinuousBoard, GuaranteedBoard, Gu
     }
 
     func activate(withGuaranteedInput input: InputType) {
-        let viewController = builder.build(withDelegate: self)
+        let component = builder.build(withDelegate: self)
+        let viewController = component.userInterface
+        motherboard.installIntoRoot(viewController)
         rootViewController.show(viewController)
     }
 }
