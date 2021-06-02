@@ -9,10 +9,12 @@
 import UIKit
 import ViewStateCore
 
-final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIABLE_moduleName___Controller {
+final class ___VARIABLE_moduleName___ViewController: UIViewController {
     // MARK: Dependencies
 
-    weak var delegate: ___VARIABLE_moduleName___Delegate?
+    weak var delegate: ___VARIABLE_moduleName___ActionDelegate?
+
+    var interactor: ___VARIABLE_moduleName___Interactable!
 
     // MARK: LifeCycle
 

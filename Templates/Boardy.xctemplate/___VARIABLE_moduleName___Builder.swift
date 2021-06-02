@@ -11,13 +11,14 @@ import SiFUtilities
 
 struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Buildable {
     func build(withDelegate delegate: ___VARIABLE_moduleName___Delegate?) -> ___VARIABLE_moduleName___Interface {
-        let controller = ___VARIABLE_moduleName___ViewController.instantiateFromStoryboard()
-        controller.delegate = delegate
+        let viewController = ___VARIABLE_moduleName___ViewController.instantiateFromStoryboard()
+        viewController.delegate = delegate
 
         let controller = ___VARIABLE_moduleName___Controller()
         controller.bind(to: viewController)
+        controller.delegate = delegate
         
-        viewController.attachObject(controller)
+        viewController.interactor = controller
 
         return ___VARIABLE_moduleName___Interface(userInterface: viewController, controller: controller)
     }

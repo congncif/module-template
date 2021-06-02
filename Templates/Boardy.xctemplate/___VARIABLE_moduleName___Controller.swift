@@ -13,10 +13,16 @@ final class ___VARIABLE_moduleName___ViewState: ViewState {
     //@objc fileprivate dynamic var
 }
 
-final class ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___Controllable {
+final class ___VARIABLE_moduleName___Controller {
+    weak var delegate: ___VARIABLE_moduleName___ControlDelegate?
+
     private lazy var state = ___VARIABLE_moduleName___ViewState()
 
     func bind(to subscriber: ViewStateSubscriberObject) {
         state.register(subscriberObject: subscriber)
     }
 }
+
+extension ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___Interactable {}
+
+extension ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___Controllable {}
