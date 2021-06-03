@@ -33,7 +33,9 @@ final class ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___ViewSt
 }
 
 extension ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___Interactable {
-    func didBecomeActive() {}
+    func didBecomeActive() {
+        delegate?.didBecomeActive()
+    }
 }
 
 extension ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___Controllable {}

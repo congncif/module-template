@@ -15,7 +15,9 @@ protocol ___VARIABLE_moduleName___Controllable: AnyObject {}
 protocol ___VARIABLE_moduleName___ActionDelegate: AnyObject {}
 
 /// Use for Controller (Interactor) sending messages to outside
-protocol ___VARIABLE_moduleName___ControlDelegate: AnyObject {}
+protocol ___VARIABLE_moduleName___ControlDelegate: AnyObject {
+    func didBecomeActive()
+}
 
 /// Interface combined of above two delegates for convenience using purpose
 protocol ___VARIABLE_moduleName___Delegate: ___VARIABLE_moduleName___ActionDelegate, ___VARIABLE_moduleName___ControlDelegate {}
