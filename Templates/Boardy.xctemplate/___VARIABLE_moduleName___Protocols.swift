@@ -11,9 +11,6 @@ import UIKit
 /// Use for pushing messages inwards from outside
 protocol ___VARIABLE_moduleName___Controllable: AnyObject {}
 
-/// Use for interacting with data before sending messages to outside
-protocol ___VARIABLE_moduleName___Interactable {}
-
 /// Use for ViewController sending messages to outside directly
 protocol ___VARIABLE_moduleName___ActionDelegate: AnyObject {}
 

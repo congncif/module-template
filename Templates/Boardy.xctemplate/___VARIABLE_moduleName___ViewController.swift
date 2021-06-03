@@ -13,6 +13,7 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController {
     // MARK: Dependencies
 
     weak var delegate: ___VARIABLE_moduleName___ActionDelegate?
+    weak var stateBinder: ___VARIABLE_moduleName___ViewStateBindable?
 
     var interactor: ___VARIABLE_moduleName___Interactable!
 
@@ -20,6 +21,8 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        stateBinder?.bind(to: self)
+        interactor.didBecomeActive()
     }
 
     // MARK: Private computed & temporary properties
