@@ -19,7 +19,7 @@ protocol ___VARIABLE_moduleName___ViewStateBindable: AnyObject {
 }
 
 final class ___VARIABLE_moduleName___ViewState: ViewState {
-    //@objc fileprivate dynamic var
+    //@objc fileprivate(set) dynamic var
 }
 
 final class ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___ViewStateBindable {

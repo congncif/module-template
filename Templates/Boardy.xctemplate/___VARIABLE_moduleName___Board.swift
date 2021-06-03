@@ -16,7 +16,7 @@ final class ___VARIABLE_moduleName___Board: ContinuousBoard, GuaranteedBoard, Gu
 
     private let builder: ___VARIABLE_moduleName___Buildable
 
-    init(identifier: BoardID, builder: ___VARIABLE_moduleName___Buildable, continuousBoard: FlowMotherboard = Motherboard()) {
+    init(identifier: BoardID, builder: ___VARIABLE_moduleName___Buildable, continuousBoard: FlowMotherboard) {
         self.builder = builder
         super.init(identifier: identifier, motherboard: continuousBoard)
         registerFlows()
