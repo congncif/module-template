@@ -19,13 +19,13 @@ public protocol ___VARIABLE_moduleName___Activatable {
     func activate(with input: ___VARIABLE_moduleName___Input)
 }
 
+// MARK: - Activations
+
 extension ___VARIABLE_moduleName___Activatable {
     public func activate() {
         activate(with: .none)
     }
 }
-
-// MARK: - Activations
 
 /// For Motherboard call
 struct ___VARIABLE_moduleName___MainActivation {
@@ -51,6 +51,23 @@ extension ___VARIABLE_moduleName___Activation: ___VARIABLE_moduleName___Activata
     }
 }
 
+// MARK: - Handler
+
+public protocol ___VARIABLE_moduleName___OutputHandling {
+    func addTarget<Target: AnyObject>(_ target: Target, action: @escaping (Target, ___VARIABLE_moduleName___Output) -> Void)
+}
+
+struct ___VARIABLE_moduleName___OutputHandler {
+    let identifier: BoardID
+    let mainboard: FlowManageable
+}
+
+extension ___VARIABLE_moduleName___OutputHandler: ___VARIABLE_moduleName___OutputHandling {
+    func addTarget<Target: AnyObject>(_ target: Target, action: @escaping (Target, ___VARIABLE_moduleName___Output) -> Void) {
+        mainboard.registerFlow(matchedIdentifiers: identifier, target: target, uniqueOutputType: ___VARIABLE_moduleName___Output.self, nextHandler: action)
+    }
+}
+
 // MARK: - Quick Access
 
 extension ActivatableBoard {
@@ -61,5 +78,11 @@ extension ActivatableBoard {
         default:
             return ___VARIABLE_moduleName___Activation(identifier: identifier, source: self)
         }
+    }
+}
+
+extension FlowManageable {
+    public func <#___VARIABLE_moduleName___#>Handler(identifier: BoardID) -> ___VARIABLE_moduleName___OutputHandling {
+        return ___VARIABLE_moduleName___OutputHandler(identifier: identifier, mainboard: self)
     }
 }
