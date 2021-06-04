@@ -16,9 +16,9 @@ struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Buildable {
 
         let controller = ___VARIABLE_moduleName___Controller()
         controller.delegate = delegate
+        controller.view = viewController
         
         viewController.interactor = controller
-        viewController.stateBinder = controller
 
         return ___VARIABLE_moduleName___Interface(userInterface: viewController, controller: controller)
     }

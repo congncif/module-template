@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import ViewStateCore
+
+protocol ___VARIABLE_moduleName___View: AnyObject {}
 
 final class ___VARIABLE_moduleName___ViewController: UIViewController {
     // MARK: Dependencies
 
     weak var delegate: ___VARIABLE_moduleName___ActionDelegate?
-    weak var stateBinder: ___VARIABLE_moduleName___ViewStateBindable?
 
     var interactor: ___VARIABLE_moduleName___Interactable!
 
@@ -21,7 +21,6 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        stateBinder?.bind(to: self)
         interactor.didBecomeActive()
     }
 
@@ -32,15 +31,7 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController {
 
 // MARK: - Behaviors
 
-extension ___VARIABLE_moduleName___ViewController {}
-
-// MARK: - ViewState
-
-extension ___VARIABLE_moduleName___ViewController: DedicatedViewStateRenderable {
-    func dedicatedRender(state: ___VARIABLE_moduleName___ViewState) {
-        // handle state changes
-    }
-}
+extension ___VARIABLE_moduleName___ViewController: ___VARIABLE_moduleName___View {}
 
 // MARK: - Private methods
 

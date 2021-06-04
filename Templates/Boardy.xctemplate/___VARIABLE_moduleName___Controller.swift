@@ -7,29 +7,15 @@
 //
 
 import Foundation
-import ViewStateCore
 
 /// Use for interacting with data before sending messages to outside
 protocol ___VARIABLE_moduleName___Interactable {
     func didBecomeActive()
 }
 
-protocol ___VARIABLE_moduleName___ViewStateBindable: AnyObject {
-    func bind(to subscriber: ViewStateSubscriberObject)
-}
-
-final class ___VARIABLE_moduleName___ViewState: ViewState {
-    //@objc fileprivate(set) dynamic var
-}
-
-final class ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___ViewStateBindable {
+final class ___VARIABLE_moduleName___Controller {
     weak var delegate: ___VARIABLE_moduleName___ControlDelegate?
-
-    private lazy var state = ___VARIABLE_moduleName___ViewState()
-
-    func bind(to subscriber: ViewStateSubscriberObject) {
-        state.register(subscriberObject: subscriber)
-    }
+    weak var view: ___VARIABLE_moduleName___View!
 }
 
 extension ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___Interactable {
