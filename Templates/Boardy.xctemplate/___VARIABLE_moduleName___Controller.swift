@@ -8,10 +8,7 @@
 
 import Foundation
 
-/// Use for interacting with data before sending messages to outside
-protocol ___VARIABLE_moduleName___Interactable {
-    func didBecomeActive()
-}
+protocol ___VARIABLE_moduleName___View: AnyObject {}
 
 final class ___VARIABLE_moduleName___Controller {
     weak var delegate: ___VARIABLE_moduleName___ControlDelegate?

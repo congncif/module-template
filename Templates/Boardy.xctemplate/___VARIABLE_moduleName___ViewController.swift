@@ -8,7 +8,10 @@
 
 import UIKit
 
-protocol ___VARIABLE_moduleName___View: AnyObject {}
+/// Use for interacting with data before sending messages to outside
+protocol ___VARIABLE_moduleName___Interactable {
+    func didBecomeActive()
+}
 
 final class ___VARIABLE_moduleName___ViewController: UIViewController {
     // MARK: Dependencies
