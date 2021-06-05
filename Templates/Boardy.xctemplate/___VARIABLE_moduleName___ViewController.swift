@@ -34,7 +34,7 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController {
 
 // MARK: - Behaviors
 
-extension ___VARIABLE_moduleName___ViewController: ___VARIABLE_moduleName___View {}
+extension ___VARIABLE_moduleName___ViewController: ___VARIABLE_moduleName___Viewable {}
 
 // MARK: - Private methods
 
