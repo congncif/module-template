@@ -54,7 +54,8 @@ extension ___VARIABLE_moduleName___Activation: ___VARIABLE_moduleName___Activata
 // MARK: - Handler
 
 public protocol ___VARIABLE_moduleName___OutputHandling {
-    func addTarget<Target: AnyObject>(_ target: Target, action: @escaping (Target, ___VARIABLE_moduleName___Output) -> Void)
+    func addTarget<Target>(_ target: Target, action: @escaping (Target, ___VARIABLE_moduleName___Output) -> Void)
+    func bind(to bus: Bus<___VARIABLE_moduleName___Output>)
 }
 
 struct ___VARIABLE_moduleName___OutputHandler {
@@ -63,15 +64,19 @@ struct ___VARIABLE_moduleName___OutputHandler {
 }
 
 extension ___VARIABLE_moduleName___OutputHandler: ___VARIABLE_moduleName___OutputHandling {
-    func addTarget<Target: AnyObject>(_ target: Target, action: @escaping (Target, ___VARIABLE_moduleName___Output) -> Void) {
-        mainboard.registerFlow(matchedIdentifiers: identifier, target: target, uniqueOutputType: ___VARIABLE_moduleName___Output.self, nextHandler: action)
+    func addTarget<Target>(_ target: Target, action: @escaping (Target, ___VARIABLE_moduleName___Output) -> Void) {
+        mainboard.registerGuaranteedFlow(matchedIdentifiers: identifier, target: target, uniqueOutputType: ___VARIABLE_moduleName___Output.self, handler: action)
+    }
+
+    func bind(to bus: Bus<___VARIABLE_moduleName___Output>) {
+        mainboard.registerGuaranteedFlow(matchedIdentifiers: identifier, bindToBus: bus)
     }
 }
 
 // MARK: - Quick Access
 
 extension ActivatableBoard {
-    public func <#___VARIABLE_moduleName___#>(identifier: BoardID) -> ___VARIABLE_moduleName___Activatable {
+    public func <#mod name var#>(identifier: BoardID) -> ___VARIABLE_moduleName___Activatable {
         switch self {
         case let main as MotherboardType:
             return ___VARIABLE_moduleName___MainActivation(identifier: identifier, mainboard: main)
@@ -82,7 +87,7 @@ extension ActivatableBoard {
 }
 
 extension FlowManageable {
-    public func <#___VARIABLE_moduleName___#>Handler(identifier: BoardID) -> ___VARIABLE_moduleName___OutputHandling {
+    public func <#mod name var#>Handler(identifier: BoardID) -> ___VARIABLE_moduleName___OutputHandling {
         return ___VARIABLE_moduleName___OutputHandler(identifier: identifier, mainboard: self)
     }
 }
