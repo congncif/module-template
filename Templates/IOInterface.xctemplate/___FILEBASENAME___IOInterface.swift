@@ -9,12 +9,6 @@
 import Boardy
 import Foundation
 
-public typealias ___VARIABLE_moduleName___Input = Any?
-
-public enum ___VARIABLE_moduleName___Output {}
-
-public enum ___VARIABLE_moduleName___Command {}
-
 // MARK: - Quick Access
 
 public struct ___VARIABLE_moduleName___Destination {
