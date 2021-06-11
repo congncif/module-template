@@ -28,19 +28,15 @@ extension ActivatableBoard {
 struct ___VARIABLE_moduleName___MainDestination {
     let activation: MainboardActivation<___VARIABLE_moduleName___Input>
     let interaction: MainboardInteraction<___VARIABLE_moduleName___Command>
+    let flow: FlowHandler<___VARIABLE_moduleName___Output>
 }
 
-extension MotherboardType {
+extension MotherboardType where Self: FlowManageable {
     func io___VARIABLE_moduleName___(_ identifier: BoardID) -> ___VARIABLE_moduleName___MainDestination {
         ___VARIABLE_moduleName___MainDestination(
             activation: activation(identifier, with: ___VARIABLE_moduleName___Input.self),
-            interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self)
+            interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self),
+            flow: matchedFlow(identifier, with: ___VARIABLE_moduleName___Output.self)
         )
-    }
-}
-
-extension FlowManageable {
-    func io___VARIABLE_moduleName___Flow(_ identifier: BoardID) -> FlowHandler<___VARIABLE_moduleName___Output> {
-        matchedFlow(identifier, with: ___VARIABLE_moduleName___Output.self)
     }
 }
