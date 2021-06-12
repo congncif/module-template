@@ -11,20 +11,32 @@ import Foundation
 
 // MARK: - Quick Access
 
+struct ___VARIABLE_moduleName___Destination {
+    let activation: BoardActivation<___VARIABLE_moduleName___Input>
+    let interaction: BoardInteraction<___VARIABLE_moduleName___Command>
+}
+
 extension ActivatableBoard {
-    func io___VARIABLE_moduleName___(_ identifier: BoardID) -> BoardActivation<___VARIABLE_moduleName___Input> {
-        activation(identifier, with: ___VARIABLE_moduleName___Input.self)
+    func io___VARIABLE_moduleName___(_ identifier: BoardID) -> ___VARIABLE_moduleName___Destination {
+        ___VARIABLE_moduleName___Destination(
+            activation: activation(identifier, with: ___VARIABLE_moduleName___Input.self),
+            interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self)
+        )
     }
 }
 
-extension MotherboardType {
-    func io___VARIABLE_moduleName___(_ identifier: BoardID) -> MainboardActivation<___VARIABLE_moduleName___Input> {
-        activation(identifier, with: ___VARIABLE_moduleName___Input.self)
-    }
+struct ___VARIABLE_moduleName___MainDestination {
+    let activation: MainboardActivation<___VARIABLE_moduleName___Input>
+    let interaction: MainboardInteraction<___VARIABLE_moduleName___Command>
+    let flow: FlowHandler<___VARIABLE_moduleName___Output>
 }
 
-extension FlowManageable {
-    func io___VARIABLE_moduleName___Flow(_ identifier: BoardID) -> FlowHandler<___VARIABLE_moduleName___Output> {
-        matchedFlow(identifier, with: ___VARIABLE_moduleName___Output.self)
+extension MotherboardType where Self: FlowManageable {
+    func io___VARIABLE_moduleName___(_ identifier: BoardID) -> ___VARIABLE_moduleName___MainDestination {
+        ___VARIABLE_moduleName___MainDestination(
+            activation: activation(identifier, with: ___VARIABLE_moduleName___Input.self),
+            interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self),
+            flow: matchedFlow(identifier, with: ___VARIABLE_moduleName___Output.self)
+        )
     }
 }
