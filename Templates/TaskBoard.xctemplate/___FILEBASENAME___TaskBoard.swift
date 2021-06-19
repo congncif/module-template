@@ -15,6 +15,6 @@ enum ___VARIABLE_moduleName___TaskBoardFactory {
         TaskBoard<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Output>(identifier: identifier) { board, input, completion in
             <#completion#>
         }
-        processingHandler: { $0.showDefaultLoading($1) }
+        processingHandler: { $0.showDefaultLoading($0.isProcessing) }
     }
 }
