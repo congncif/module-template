@@ -9,6 +9,10 @@
 import Boardy
 import Foundation
 
+public enum ___VARIABLE_moduleName___Namespace {
+    public static let `default`: BoardID = "pub.mod.___VARIABLE_moduleName___"
+}
+
 // MARK: - Quick Access
 
 public struct ___VARIABLE_moduleName___Destination {
@@ -17,7 +21,7 @@ public struct ___VARIABLE_moduleName___Destination {
 }
 
 extension ActivatableBoard {
-    public func io___VARIABLE_moduleName___(_ identifier: BoardID) -> ___VARIABLE_moduleName___Destination {
+    public func io___VARIABLE_moduleName___(_ identifier: BoardID = ___VARIABLE_moduleName___Namespace.default) -> ___VARIABLE_moduleName___Destination {
         ___VARIABLE_moduleName___Destination(
             activation: activation(identifier, with: ___VARIABLE_moduleName___Input.self),
             interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self)
@@ -32,7 +36,7 @@ public struct ___VARIABLE_moduleName___MainDestination {
 }
 
 extension MotherboardType where Self: FlowManageable {
-    public func io___VARIABLE_moduleName___(_ identifier: BoardID) -> ___VARIABLE_moduleName___MainDestination {
+    public func io___VARIABLE_moduleName___(_ identifier: BoardID = ___VARIABLE_moduleName___Namespace.default) -> ___VARIABLE_moduleName___MainDestination {
         ___VARIABLE_moduleName___MainDestination(
             activation: activation(identifier, with: ___VARIABLE_moduleName___Input.self),
             interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self),
