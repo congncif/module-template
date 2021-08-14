@@ -10,6 +10,6 @@ import Foundation
 
 typealias ___VARIABLE_moduleName___Input = Any?
 
-enum ___VARIABLE_moduleName___Output {}
+typealias ___VARIABLE_moduleName___Output = Any?
 
 enum ___VARIABLE_moduleName___Command {}
