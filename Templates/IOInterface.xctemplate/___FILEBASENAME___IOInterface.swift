@@ -9,11 +9,13 @@
 import Boardy
 import Foundation
 
+// MARK: - Namespace
+
 public enum ___VARIABLE_moduleName___Namespace {
-    public static let `default`: BoardID = "pub.mod.___VARIABLE_moduleName___"
+    public static let `default`: BoardID = "pub.mod.___TARGETNAME___.___VARIABLE_moduleName___"
 }
 
-// MARK: - Quick Access
+// MARK: - Interface
 
 public struct ___VARIABLE_moduleName___Destination {
     public let activation: BoardActivation<___VARIABLE_moduleName___Input>

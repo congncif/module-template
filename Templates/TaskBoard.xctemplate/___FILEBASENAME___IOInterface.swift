@@ -9,7 +9,13 @@
 import Boardy
 import Foundation
 
-// MARK: - Quick Access
+// MARK: - Namespace
+
+extension BoardID {
+    static let mod___VARIABLE_moduleName___: BoardID = "mod.___TARGETNAME___.___VARIABLE_moduleName___"
+}
+
+// MARK: - Interface
 
 struct ___VARIABLE_moduleName___Destination {
     let activation: BoardActivation<___VARIABLE_moduleName___Input>
@@ -17,7 +23,7 @@ struct ___VARIABLE_moduleName___Destination {
 }
 
 extension ActivatableBoard {
-    func io___VARIABLE_moduleName___(_ identifier: BoardID) -> ___VARIABLE_moduleName___Destination {
+    func io___VARIABLE_moduleName___(_ identifier: BoardID = .mod___VARIABLE_moduleName___) -> ___VARIABLE_moduleName___Destination {
         ___VARIABLE_moduleName___Destination(
             activation: activation(identifier, with: ___VARIABLE_moduleName___Input.self),
             interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self)
@@ -32,7 +38,7 @@ struct ___VARIABLE_moduleName___MainDestination {
 }
 
 extension MotherboardType where Self: FlowManageable {
-    func io___VARIABLE_moduleName___(_ identifier: BoardID) -> ___VARIABLE_moduleName___MainDestination {
+    func io___VARIABLE_moduleName___(_ identifier: BoardID = .mod___VARIABLE_moduleName___) -> ___VARIABLE_moduleName___MainDestination {
         ___VARIABLE_moduleName___MainDestination(
             activation: activation(identifier, with: ___VARIABLE_moduleName___Input.self),
             interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self),
