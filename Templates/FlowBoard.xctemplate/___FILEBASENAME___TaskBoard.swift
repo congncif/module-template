@@ -14,24 +14,12 @@ final class ___VARIABLE_moduleName___Board: ContinuousBoard, GuaranteedBoard, Gu
 	typealias InputType = ___VARIABLE_moduleName___Input
     typealias OutputType = ___VARIABLE_moduleName___Output
 
-    private let builder: ___VARIABLE_moduleName___Buildable
-
-    init(identifier: BoardID, builder: ___VARIABLE_moduleName___Buildable, continuousBoard: FlowMotherboard) {
-        self.builder = builder
+    init(identifier: BoardID, continuousBoard: FlowMotherboard) {
         super.init(identifier: identifier, motherboard: continuousBoard)
         registerFlows()
     }
 
     func activate(withGuaranteedInput input: InputType) {
-        let component = builder.build(withDelegate: self)
-        let viewController = component.userInterface
-        motherboard.installIntoRoot(viewController)
-        rootViewController.show(viewController)
-    }
-}
-
-extension ___VARIABLE_moduleName___Board: ___VARIABLE_moduleName___Delegate {
-    func didBecomeActive() {
         // <#code#>
     }
 }
