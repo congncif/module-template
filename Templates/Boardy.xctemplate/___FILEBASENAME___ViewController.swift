@@ -24,6 +24,7 @@ final class ___VARIABLE_moduleName___ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
         interactor.didBecomeActive()
     }
 
@@ -38,4 +39,6 @@ extension ___VARIABLE_moduleName___ViewController: ___VARIABLE_moduleName___View
 
 // MARK: - Private methods
 
-private extension ___VARIABLE_moduleName___ViewController {}
+private extension ___VARIABLE_moduleName___ViewController {
+    func setupView() {}
+}

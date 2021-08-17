@@ -31,13 +31,9 @@ final class ___VARIABLE_moduleName___Board: ContinuousBoard, GuaranteedBoard, Gu
 }
 
 extension ___VARIABLE_moduleName___Board: ___VARIABLE_moduleName___Delegate {
-    func didBecomeActive() {
-        // <#code#>
-    }
+    func didBecomeActive() {}
 }
 
 private extension ___VARIABLE_moduleName___Board {
-    func registerFlows() {
-        // <#code#>
-    }
+    func registerFlows() {}
 }

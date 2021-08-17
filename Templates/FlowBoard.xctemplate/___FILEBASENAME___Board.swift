@@ -20,12 +20,10 @@ final class ___VARIABLE_moduleName___Board: ContinuousBoard, GuaranteedBoard, Gu
     }
 
     func activate(withGuaranteedInput input: InputType) {
-        // <#code#>
+        <#code#>
     }
 }
 
 private extension ___VARIABLE_moduleName___Board {
-    func registerFlows() {
-        // <#code#>
-    }
+    func registerFlows() {}
 }
