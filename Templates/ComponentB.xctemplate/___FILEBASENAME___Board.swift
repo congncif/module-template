@@ -9,8 +9,9 @@
 import Boardy
 import Foundation
 
-final class ___VARIABLE_moduleName___Board: Board, GuaranteedBoard {
-	typealias InputType = <#InputType#>
+final class ___VARIABLE_moduleName___Board: Board, GuaranteedBoard, GuaranteedOutputSendingBoard {
+	typealias InputType = ___VARIABLE_moduleName___Input
+    typealias OutputType = ___VARIABLE_moduleName___Output
 
     private let builder: ___VARIABLE_moduleName___Buildable
 
