@@ -17,8 +17,6 @@ extension BoardID {
 
 // MARK: - Interface
 
-typealias ___VARIABLE_moduleName___TaskParameter = BlockTaskParameter<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Output>
-
 struct ___VARIABLE_moduleName___Destination {
     let activation: BoardActivation<___VARIABLE_moduleName___TaskParameter>
     let interaction: BoardInteraction<___VARIABLE_moduleName___Command>
