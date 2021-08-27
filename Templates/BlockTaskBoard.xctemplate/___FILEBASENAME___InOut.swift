@@ -15,4 +15,4 @@ typealias ___VARIABLE_moduleName___Output = Any?
 
 typealias ___VARIABLE_moduleName___Command = Any?
 
-typealias ___VARIABLE_moduleName___TaskParameter = BlockTaskParameter<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Output>
+typealias ___VARIABLE_moduleName___Parameter = BlockTaskParameter<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Output>

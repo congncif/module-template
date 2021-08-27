@@ -13,3 +13,5 @@ typealias ___VARIABLE_moduleName___Input = Any?
 typealias ___VARIABLE_moduleName___Output = Any?
 
 enum ___VARIABLE_moduleName___Command {}
+
+typealias ___VARIABLE_moduleName___Parameter = ___VARIABLE_moduleName___Input
