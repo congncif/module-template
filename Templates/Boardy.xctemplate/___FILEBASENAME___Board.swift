@@ -10,15 +10,15 @@ import Boardy
 import Foundation
 import UIKit
 
-final class ___VARIABLE_moduleName___Board: ContinuousBoard, GuaranteedBoard, GuaranteedOutputSendingBoard {
+final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBoard, GuaranteedOutputSendingBoard {
 	typealias InputType = ___VARIABLE_moduleName___Input
     typealias OutputType = ___VARIABLE_moduleName___Output
 
     private let builder: ___VARIABLE_moduleName___Buildable
 
-    init(identifier: BoardID, builder: ___VARIABLE_moduleName___Buildable, continuousBoard: FlowMotherboard) {
+    init(identifier: BoardID, builder: ___VARIABLE_moduleName___Buildable, producer: ActivableBoardProducer) {
         self.builder = builder
-        super.init(identifier: identifier, motherboard: continuousBoard)
+        super.init(identifier: identifier, boardProducer: producer)
         registerFlows()
     }
 
