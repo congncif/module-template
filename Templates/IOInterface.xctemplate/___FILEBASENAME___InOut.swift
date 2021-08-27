@@ -10,7 +10,7 @@ import Foundation
 
 public typealias ___VARIABLE_moduleName___Input = Any?
 
-public typealias ___VARIABLE_moduleName___Output = Any?
+public typealias ___VARIABLE_moduleName___Output = Void
 
 public enum ___VARIABLE_moduleName___Command {}
 

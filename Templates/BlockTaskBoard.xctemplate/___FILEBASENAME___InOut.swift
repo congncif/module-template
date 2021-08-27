@@ -11,7 +11,7 @@ import Foundation
 
 typealias ___VARIABLE_moduleName___Input = Any?
 
-typealias ___VARIABLE_moduleName___Output = Any?
+typealias ___VARIABLE_moduleName___Output = Void
 
 typealias ___VARIABLE_moduleName___Command = Any?
 
