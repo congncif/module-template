@@ -19,16 +19,23 @@ fi
 # FUNCTIONS
 ##############################################################################################
 
+function remove_template() {
+	local name=$1
+	local temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/$name.xctemplate
+	rm -rf "$temp_dir"
+}
+
 function update_template() {
 	local name=$1
 	local temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/$name.xctemplate
 
 	if [ -d "$temp_dir" ]; then
-		rm -rf "$temp_dir"
 		echo "🌷 Updated $name template"
 	else
 		echo "🌹 Added $name template"
 	fi
+
+	remove_template $name
 
 	cp -R Templates/$name.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
 }
@@ -37,31 +44,31 @@ function update_template() {
 # INSTALL
 ##############################################################################################
 
-update_template IDMCore
+# update_template IDMCore
+# update_template ModuleX
 
-update_template ModuleX
+# update_template VIP
+# update_template VaIP
+# update_template ComponentB
+# update_template VIP-IDM
+# update_template VaIP-IDM
+
+remove_template IDMCore
+remove_template ModuleX
+
+remove_template VIP
+remove_template VaIP
+remove_template ComponentB
+remove_template VIP-IDM
+remove_template VaIP-IDM
 
 update_template Boardy
-
-update_template VIP
-
-update_template VaIP
-
-update_template ComponentB
-
-update_template VIP-IDM
-
-update_template VaIP-IDM
+update_template TaskBoard
+update_template FlowBoard
+update_template BlockTaskBoard
 
 update_template IOInterface
-
 update_template ModuleIntegration
-
-update_template TaskBoard
-
-update_template FlowBoard
-
-update_template BlockTaskBoard
 
 ##############################################################################################
 # DONE
