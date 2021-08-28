@@ -53,6 +53,8 @@ function update_template() {
 # update_template VIP-IDM
 # update_template VaIP-IDM
 
+# Remove legacy templates
+
 remove_template IDMCore
 remove_template ModuleX
 
@@ -62,9 +64,13 @@ remove_template ComponentB
 remove_template VIP-IDM
 remove_template VaIP-IDM
 
+remove_template FlowBoard
+
+# Install templates
+
 update_template Boardy
 update_template TaskBoard
-update_template FlowBoard
+update_template EmptyBoard
 update_template BlockTaskBoard
 
 update_template IOInterface
