@@ -72,6 +72,7 @@ update_template Boardy
 update_template TaskBoard
 update_template EmptyBoard
 update_template BlockTaskBoard
+update_template BarrierBoard
 
 update_template IOInterface
 update_template ModuleIntegration

@@ -22,3 +22,5 @@ extension ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___Interact
 }
 
 extension ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___Controllable {}
+
+// MARK: - View Model

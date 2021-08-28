@@ -25,7 +25,7 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
     func activate(withGuaranteedInput input: InputType) {
         let component = builder.build(withDelegate: self)
         let viewController = component.userInterface
-        motherboard.installIntoRoot(viewController)
+        motherboard.putIntoContext(viewController)
         rootViewController.show(viewController)
     }
 }
