@@ -52,7 +52,7 @@ public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
 extension ___VARIABLE_moduleName___ModulePlugin {
     public static var bundledPlugins: [ModulePlugin] {
         return [
-            ___VARIABLE_moduleName___ModulePlugin(service: .default(___VARIABLE_moduleName___Namespace.default)),
+            ___VARIABLE_moduleName___ModulePlugin(service: .default(___VARIABLE_moduleName___ID.default)),
         ]
     }
 }

@@ -9,7 +9,7 @@
 import Boardy
 import Foundation
 
-// MARK: - Namespace
+// MARK: - ID
 
 extension BoardID {
     static let mod___VARIABLE_moduleName___: BoardID = "mod.___TARGETNAME___.___VARIABLE_moduleName___"
