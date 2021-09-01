@@ -11,40 +11,48 @@ import Foundation
 import ___VARIABLE_moduleName___IO
 
 public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
-    // public var identifier: BoardID {
-    //     switch serviceType {
-    //     case let .some(identifier):
-    //         return identifier
-    //     }
-    // }
-    public let identifier: BoardID
-    public let identifierExtensions: ___VARIABLE_moduleName___ModulePlugin.IDExtensions
+    public let service: ___VARIABLE_moduleName___ModulePlugin.ServiceType
 
-    public init(identifier: BoardID = ___VARIABLE_moduleName___Namespace.default, identifierExtensions: ___VARIABLE_moduleName___ModulePlugin.IDExtensions = .init()) {
-        self.identifier = identifier
-        self.identifierExtensions = identifierExtensions
+    public init(service: ___VARIABLE_moduleName___ModulePlugin.ServiceType) {
+        self.service = service
     }
 
     public func apply(for main: MainComponent) {
         let mainProducer = main.producer
-        let externalIDs = identifierExtensions
-        
-        mainProducer.registerBoard(identifier) { [unowned mainProducer] identifier in
-            return RootBoard(identifier: identifier, producer: BoardProducer(externalProducer: mainProducer, registrationsBuilder: { producer in
-                // <#registration code#>
-            }))
+
+        switch service {
+        case .default:
+            mainProducer.registerBoard(identifier) { [unowned mainProducer] identifier in
+                RootBoard(
+                    identifier: identifier,
+                    producer: BoardProducer(
+                        externalProducer: mainProducer,
+                        registrationsBuilder: { producer in
+                            // <#registration code#>
+                        }
+                    )
+                )
+            }
         }
     }
 
-    public struct IDExtensions {
-        public init() {}
+    public var identifier: BoardID {
+        switch service {
+        case let .default(identifier):
+            return identifier
+        }
     }
 
-    // public enum ServiceType {
-    //     case some(BoardID)
-        
-    //     static var some: ServiceType {
-    //         .some("someID")
-    //     }
-    // }
+    /// Each service is equivalent to one entry point
+    public enum ServiceType {
+        case `default`(BoardID)
+    }
+}
+
+extension ___VARIABLE_moduleName___ModulePlugin {
+    public static var bundledPlugins: [ModulePlugin] {
+        return [
+            ___VARIABLE_moduleName___ModulePlugin(service: .default(___VARIABLE_moduleName___Namespace.default)),
+        ]
+    }
 }
