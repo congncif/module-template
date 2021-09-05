@@ -11,7 +11,7 @@ import Foundation
 import SiFUtilities
 
 enum ___VARIABLE_moduleName___TaskBoardFactory {
-    static func get(identifier: BoardID) -> ActivatableBoard {
+    static func make(identifier: BoardID) -> ActivatableBoard {
         TaskBoard<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Output>(identifier: identifier) { board, input, completion in
             <#completion#>
         }
