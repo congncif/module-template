@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 
 final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBoard, GuaranteedOutputSendingBoard {
-	typealias InputType = ___VARIABLE_moduleName___Input
+	typealias InputType = ___VARIABLE_moduleName___Parameter
     typealias OutputType = ___VARIABLE_moduleName___Output
 
     init(identifier: BoardID, producer: ActivableBoardProducer) {
