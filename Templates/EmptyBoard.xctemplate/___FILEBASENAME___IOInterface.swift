@@ -35,6 +35,8 @@ struct ___VARIABLE_moduleName___MainDestination {
     let activation: MainboardActivation<___VARIABLE_moduleName___Parameter>
     let interaction: MainboardInteraction<___VARIABLE_moduleName___Command>
     let flow: FlowHandler<___VARIABLE_moduleName___Output>
+    let action: ActionFlowHandler<___VARIABLE_moduleName___Action>
+    let completion: CompletionFlowHandler
 }
 
 extension MotherboardType where Self: FlowManageable {
@@ -42,7 +44,9 @@ extension MotherboardType where Self: FlowManageable {
         ___VARIABLE_moduleName___MainDestination(
             activation: activation(identifier, with: ___VARIABLE_moduleName___Parameter.self),
             interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self),
-            flow: matchedFlow(identifier, with: ___VARIABLE_moduleName___Output.self)
+            flow: matchedFlow(identifier, with: ___VARIABLE_moduleName___Output.self),
+            action: actionFlow(identifier, with: ___VARIABLE_moduleName___Action.self),
+            completion: completionFlow(identifier)
         )
     }
 }

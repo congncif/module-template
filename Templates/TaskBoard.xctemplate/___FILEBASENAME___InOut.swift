@@ -15,4 +15,6 @@ typealias ___VARIABLE_moduleName___Output = Void
 
 typealias ___VARIABLE_moduleName___Command = Any?
 
+enum ___VARIABLE_moduleName___Action: BoardFlowAction {}
+
 typealias ___VARIABLE_moduleName___Parameter = ___VARIABLE_moduleName___Input
