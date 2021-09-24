@@ -9,12 +9,20 @@
 import Boardy
 import Foundation
 
+// MARK: - Input
+
 typealias ___VARIABLE_moduleName___Input = Any?
+
+typealias ___VARIABLE_moduleName___Parameter = ___VARIABLE_moduleName___Input
+
+// MARK: - Output
 
 typealias ___VARIABLE_moduleName___Output = Void
 
+// MARK: - Command
+
 typealias ___VARIABLE_moduleName___Command = Any?
 
-enum ___VARIABLE_moduleName___Action: BoardFlowAction {}
+// MARK: - Action
 
-typealias ___VARIABLE_moduleName___Parameter = ___VARIABLE_moduleName___Input
+enum ___VARIABLE_moduleName___Action: BoardFlowAction {}

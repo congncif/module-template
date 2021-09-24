@@ -9,15 +9,20 @@
 import Boardy
 import Foundation
 
+// MARK: - Input
+
 typealias ___VARIABLE_moduleName___Input = Any?
-
-typealias ___VARIABLE_moduleName___Output = ___VARIABLE_moduleName___Input
-
-typealias ___VARIABLE_moduleName___Command = Any?
-
-enum ___VARIABLE_moduleName___Action: BoardFlowAction {}
-
-typealias ___VARIABLE_moduleName___BarrierBoard = BarrierBoard<___VARIABLE_moduleName___Input>
 
 typealias ___VARIABLE_moduleName___Parameter = ___VARIABLE_moduleName___BarrierBoard.Action
 
+// MARK: - Output
+
+typealias ___VARIABLE_moduleName___Output = ___VARIABLE_moduleName___Input
+
+// MARK: - Command
+
+typealias ___VARIABLE_moduleName___Command = Any?
+
+// MARK: - Action
+
+enum ___VARIABLE_moduleName___Action: BoardFlowAction {}

@@ -13,11 +13,15 @@ import Foundation
 
 typealias ___VARIABLE_moduleName___Input = Any?
 
-typealias ___VARIABLE_moduleName___Parameter = BlockTaskParameter<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Output>
+typealias ___VARIABLE_moduleName___Parameter = ___VARIABLE_moduleName___Input
 
 // MARK: - Output
 
-typealias ___VARIABLE_moduleName___Output = Void
+typealias ___VARIABLE_moduleName___Success = Void
+
+typealias ___VARIABLE_moduleName___Failure = Never
+
+typealias ___VARIABLE_moduleName___Output = Result<___VARIABLE_moduleName___Success, ___VARIABLE_moduleName___Failure>
 
 // MARK: - Command
 
