@@ -8,8 +8,12 @@
 
 import UIKit
 
+// MARK: - Inward
+
 /// Use for pushing messages inwards from outside
 protocol ___VARIABLE_moduleName___Controllable: AnyObject {}
+
+// MARK: - Outward
 
 /// Use for ViewController sending messages to outside directly
 protocol ___VARIABLE_moduleName___ActionDelegate: AnyObject {}
@@ -21,6 +25,8 @@ protocol ___VARIABLE_moduleName___ControlDelegate: AnyObject {
 
 /// Interface combined of above two delegates for convenience using purpose
 protocol ___VARIABLE_moduleName___Delegate: ___VARIABLE_moduleName___ActionDelegate, ___VARIABLE_moduleName___ControlDelegate {}
+
+// MARK: - Interface
 
 /// Defined interface for outside using purpose
 struct ___VARIABLE_moduleName___Interface {
