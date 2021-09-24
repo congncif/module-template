@@ -69,6 +69,7 @@ remove_template FlowBoard
 # Install templates
 
 update_template Boardy
+update_template BoardySwiftUI
 update_template TaskBoard
 update_template EmptyBoard
 update_template BlockTaskBoard
