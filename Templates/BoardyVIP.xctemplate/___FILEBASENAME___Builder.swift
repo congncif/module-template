@@ -15,12 +15,14 @@ struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Buildable {
         let viewController = UIStoryboard(name: nibName, bundle: bundle).instantiateInitialViewController() as! ___VARIABLE_moduleName___ViewController
         viewController.delegate = delegate
 
-        let controller = ___VARIABLE_moduleName___Controller()
-        controller.delegate = delegate
-        controller.view = viewController
-        
-        viewController.interactor = controller
+        let presenter = ___VARIABLE_moduleName___Presenter()
+        presenter.view = viewController
 
-        return ___VARIABLE_moduleName___Interface(userInterface: viewController, controller: controller)
+        let interactor = ___VARIABLE_moduleName___Interactor(presenter: presenter)
+        interactor.delegate = delegate
+        
+        viewController.interactor = interactor
+
+        return ___VARIABLE_moduleName___Interface(userInterface: viewController, controller: interactor)
     }
 }

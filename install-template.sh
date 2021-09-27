@@ -70,6 +70,7 @@ remove_template FlowBoard
 
 update_template Boardy
 update_template BoardySwiftUI
+update_template BoardyVIP
 update_template TaskBoard
 update_template EmptyBoard
 update_template BlockTaskBoard
