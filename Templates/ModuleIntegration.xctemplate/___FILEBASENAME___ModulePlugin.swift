@@ -22,16 +22,10 @@ public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
 
         switch service {
         case .default:
-            mainProducer.registerBoard(identifier) { [unowned mainProducer] identifier in
-                RootBoard(
-                    identifier: identifier,
-                    producer: BoardProducer(
-                        externalProducer: mainProducer,
-                        registrationsBuilder: { producer in
-                            // <#registration code#>
-                        }
-                    )
-                )
+            mainProducer.registerBoard(identifier) { identifier in
+                RootBoard(identifier: identifier, producer: BoardProducer(externalProducer: mainProducer, registrationsBuilder: { producer in
+                    // <#registration code#>
+                }))
             }
         }
     }
