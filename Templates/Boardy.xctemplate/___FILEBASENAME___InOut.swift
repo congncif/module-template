@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Input
 
-typealias ___VARIABLE_moduleName___Input = Any?
+typealias ___VARIABLE_moduleName___Input = Void
 
 typealias ___VARIABLE_moduleName___Parameter = ___VARIABLE_moduleName___Input
 
@@ -21,7 +21,7 @@ typealias ___VARIABLE_moduleName___Output = Void
 
 // MARK: - Command
 
-typealias ___VARIABLE_moduleName___Command = Any?
+typealias ___VARIABLE_moduleName___Command = Void
 
 // MARK: - Action
 

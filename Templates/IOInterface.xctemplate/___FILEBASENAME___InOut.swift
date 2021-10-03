@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Input
 
-public typealias ___VARIABLE_moduleName___Input = Any?
+public typealias ___VARIABLE_moduleName___Input = Void
 
 public typealias ___VARIABLE_moduleName___Parameter = ___VARIABLE_moduleName___Input
 
