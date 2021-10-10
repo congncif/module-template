@@ -8,6 +8,7 @@
 
 import Boardy
 import Foundation
+import SiFUtilities
 import UIKit
 
 final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBoard, GuaranteedOutputSendingBoard {
