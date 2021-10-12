@@ -13,7 +13,11 @@ protocol ___VARIABLE_moduleName___Viewable: AnyObject {}
 final class ___VARIABLE_moduleName___Controller {
     weak var delegate: ___VARIABLE_moduleName___ControlDelegate?
     weak var view: ___VARIABLE_moduleName___Viewable!
+
+    // MARK: Private properties
 }
+
+// MARK: - As Interactor
 
 extension ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___Interactable {
     func didBecomeActive() {
@@ -21,6 +25,12 @@ extension ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___Interact
     }
 }
 
+// MARK: - As Controller
+
 extension ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___Controllable {}
+
+// MARK: - Private methods
+
+private extension ___VARIABLE_moduleName___Controller {}
 
 // MARK: - View Model

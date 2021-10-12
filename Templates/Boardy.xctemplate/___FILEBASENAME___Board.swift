@@ -15,6 +15,8 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
 	typealias InputType = ___VARIABLE_moduleName___Parameter
     typealias OutputType = ___VARIABLE_moduleName___Output
 
+    // MARK: Dependencies
+
     private let builder: ___VARIABLE_moduleName___Buildable
 
     init(identifier: BoardID, builder: ___VARIABLE_moduleName___Buildable, producer: ActivableBoardProducer) {
@@ -29,6 +31,8 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
         motherboard.putIntoContext(viewController)
         rootViewController.show(viewController)
     }
+
+    // MARK: Private properties
 }
 
 extension ___VARIABLE_moduleName___Board: ___VARIABLE_moduleName___Delegate {

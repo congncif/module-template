@@ -18,7 +18,11 @@ final class ___VARIABLE_moduleName___Interactor {
     init(presenter: ___VARIABLE_moduleName___Presentable) {
         self.presenter = presenter
     }
+
+    // MARK: Private properties
 }
+
+// MARK: - As Interactor
 
 extension ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Interactable {
     func didBecomeActive() {
@@ -26,4 +30,10 @@ extension ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Interact
     }
 }
 
+// MARK: - As Controller
+
 extension ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Controllable {}
+
+// MARK: - Private methods
+
+private extension ___VARIABLE_moduleName___Interactor {}
