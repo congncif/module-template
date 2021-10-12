@@ -22,7 +22,7 @@ final class ___VARIABLE_moduleName___Interactor {
 
 extension ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___Interactable {
     func didBecomeActive() {
-        delegate?.didBecomeActive()
+        delegate?.loadData()
     }
 }
 

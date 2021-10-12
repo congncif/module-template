@@ -20,7 +20,7 @@ protocol ___VARIABLE_moduleName___ActionDelegate: AnyObject {}
 
 /// Use for Controller (Interactor) sending messages to outside
 protocol ___VARIABLE_moduleName___ControlDelegate: AnyObject {
-    func didBecomeActive()
+    func loadData()
 }
 
 /// Interface combined of above two delegates for convenience using purpose

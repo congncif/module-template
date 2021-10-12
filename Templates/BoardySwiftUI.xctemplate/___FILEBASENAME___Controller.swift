@@ -17,7 +17,7 @@ final class ___VARIABLE_moduleName___Controller {
 
 extension ___VARIABLE_moduleName___Controller: ___VARIABLE_moduleName___Interactable {
     func didBecomeActive() {
-        delegate?.didBecomeActive()
+        delegate?.loadData()
     }
 }
 

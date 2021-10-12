@@ -32,7 +32,7 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
 }
 
 extension ___VARIABLE_moduleName___Board: ___VARIABLE_moduleName___Delegate {
-    func didBecomeActive() {}
+    func loadData() {}
 }
 
 private extension ___VARIABLE_moduleName___Board {
