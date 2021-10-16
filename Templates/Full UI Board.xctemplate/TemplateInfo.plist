@@ -16,7 +16,7 @@
 			<key>Identifier</key>
 			<string>moduleName</string>
 			<key>Name</key>
-			<string>Module Name:</string>
+			<string>Module Name</string>
 			<key>NotPersisted</key>
 			<true/>
 			<key>Required</key>
@@ -31,6 +31,26 @@
 			<string>productName</string>
 			<key>Type</key>
 			<string>static</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>architecture</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Architecture</string>
+			<key>Description</key>
+			<string>The architecture of the business component</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Default</key>
+			<string>MVC</string>
+			<key>Values</key>
+			<array>
+				<string>MVC</string>
+				<string>VIP</string>
+				<string>SwiftUI</string>
+			</array>
 		</dict>
 	</array>
 	<key>Platforms</key>

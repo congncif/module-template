@@ -20,14 +20,14 @@ fi
 ##############################################################################################
 
 function remove_template() {
-	local name=$1
-	local temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/$name.xctemplate
+	local name="$1"
+	local temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/"$name".xctemplate
 	rm -rf "$temp_dir"
 }
 
 function update_template() {
-	local name=$1
-	local temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/$name.xctemplate
+	local name="$1"
+	local temp_dir=~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application/"$name".xctemplate
 
 	if [ -d "$temp_dir" ]; then
 		echo "🌷 Updated $name template"
@@ -37,7 +37,7 @@ function update_template() {
 
 	remove_template $name
 
-	cp -R Templates/$name.xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
+	cp -R Templates/"$name".xctemplate ~/Library/Developer/Xcode/Templates/Project\ Templates/iOS/Application
 }
 
 ##############################################################################################
@@ -66,19 +66,28 @@ remove_template VaIP-IDM
 
 remove_template FlowBoard
 
+remove_template BoardySwiftUI
+remove_template BoardyVIP
+remove_template Boardy
+remove_template TaskBoard
+remove_template EmptyBoard
+remove_template BlockTaskBoard
+remove_template BarrierBoard
+remove_template ResultTaskBoard
+
+remove_template IOInterface
+remove_template ModuleIntegration
+remove_template UIBoard
+remove_template NonUIBoard
+
+remove_template "UI Board"
+
 # Install templates
 
-update_template Boardy
-update_template BoardySwiftUI
-update_template BoardyVIP
-update_template TaskBoard
-update_template EmptyBoard
-update_template BlockTaskBoard
-update_template BarrierBoard
-update_template ResultTaskBoard
-
-update_template IOInterface
-update_template ModuleIntegration
+update_template "Full UI Board"
+update_template "Non-UI Board"
+update_template "IO Interface"
+update_template "Module Integration"
 
 ##############################################################################################
 # DONE

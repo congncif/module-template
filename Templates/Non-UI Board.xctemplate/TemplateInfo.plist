@@ -16,7 +16,7 @@
 			<key>Identifier</key>
 			<string>moduleName</string>
 			<key>Name</key>
-			<string>Module Name:</string>
+			<string>Module Name</string>
 			<key>NotPersisted</key>
 			<true/>
 			<key>Required</key>
@@ -31,6 +31,29 @@
 			<string>productName</string>
 			<key>Type</key>
 			<string>static</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>scopeType</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Type</string>
+			<key>Description</key>
+			<string>The type of the non-UI Board</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Default</key>
+			<string>Single Task</string>
+			<key>Values</key>
+			<array>
+				<string>Single Task</string>
+				<string>Block Task</string>
+				<string>Result Task</string>
+				<string>Flow</string>
+				<string>Barrier</string>
+				<string>Empty</string>
+			</array>
 		</dict>
 	</array>
 	<key>Platforms</key>

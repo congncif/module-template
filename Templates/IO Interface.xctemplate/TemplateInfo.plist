@@ -16,7 +16,7 @@
 			<key>Identifier</key>
 			<string>moduleName</string>
 			<key>Name</key>
-			<string>Module Name:</string>
+			<string>Module Name</string>
 			<key>NotPersisted</key>
 			<true/>
 			<key>Required</key>
@@ -31,6 +31,25 @@
 			<string>productName</string>
 			<key>Type</key>
 			<string>static</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>scopeType</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Access Level</string>
+			<key>Description</key>
+			<string>The scope of the interface</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Default</key>
+			<string>Public</string>
+			<key>Values</key>
+			<array>
+				<string>Public</string>
+				<string>Internal</string>
+			</array>
 		</dict>
 	</array>
 	<key>Platforms</key>

@@ -16,7 +16,7 @@
 			<key>Identifier</key>
 			<string>moduleName</string>
 			<key>Name</key>
-			<string>Module Name:</string>
+			<string>Module Name</string>
 			<key>NotPersisted</key>
 			<true/>
 			<key>Required</key>
