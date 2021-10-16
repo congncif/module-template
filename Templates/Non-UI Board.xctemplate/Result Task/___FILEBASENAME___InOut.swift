@@ -21,7 +21,7 @@ typealias ___VARIABLE_moduleName___Success = Void
 
 typealias ___VARIABLE_moduleName___Failure = Never
 
-typealias ___VARIABLE_moduleName___Output = Result<___VARIABLE_moduleName___Success, ___VARIABLE_moduleName___Failure>
+typealias ___VARIABLE_moduleName___Output = BoardResult<___VARIABLE_moduleName___Success, ___VARIABLE_moduleName___Failure>
 
 // MARK: - Command
 
