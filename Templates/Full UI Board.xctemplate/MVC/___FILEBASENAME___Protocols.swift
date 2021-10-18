@@ -29,8 +29,10 @@ protocol ___VARIABLE_moduleName___Delegate: ___VARIABLE_moduleName___ActionDeleg
 // MARK: - Interface
 
 /// Defined interface for outside using purpose
+protocol ___VARIABLE_moduleName___UserInterface: UIViewController {}
+
 struct ___VARIABLE_moduleName___Interface {
-    let userInterface: UIViewController
+    let userInterface: ___VARIABLE_moduleName___UserInterface
     let controller: ___VARIABLE_moduleName___Controllable
 }
 

@@ -13,7 +13,7 @@ protocol ___VARIABLE_moduleName___Interactable {
     func didBecomeActive()
 }
 
-final class ___VARIABLE_moduleName___ViewController: UIViewController {
+final class ___VARIABLE_moduleName___ViewController: UIViewController, ___VARIABLE_moduleName___UserInterface {
     // MARK: Dependencies
 
     weak var delegate: ___VARIABLE_moduleName___ActionDelegate?
