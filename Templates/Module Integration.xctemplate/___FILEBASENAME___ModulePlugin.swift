@@ -20,12 +20,14 @@ public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
     public func apply(for main: MainComponent) {
         let mainProducer = main.producer
 
+        let continuousProducer = BoardProducer(externalProducer: mainProducer, registrationsBuilder: { producer in
+            // BoardRegistration
+        })
+
         switch service {
         case .default:
             mainProducer.registerBoard(identifier) { identifier in
-                RootBoard(identifier: identifier, producer: BoardProducer(externalProducer: mainProducer, registrationsBuilder: { producer in
-                    // <#registration code#>
-                }))
+                RootBoardFactory.make(identifier: identifier, producer: continuousProducer)
             }
         }
     }
