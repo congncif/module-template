@@ -19,7 +19,7 @@ typealias ___VARIABLE_moduleName___Parameter = ___VARIABLE_moduleName___Input
 
 typealias ___VARIABLE_moduleName___Success = Void
 
-typealias ___VARIABLE_moduleName___Failure = Never
+typealias ___VARIABLE_moduleName___Failure = Error
 
 typealias ___VARIABLE_moduleName___Output = BoardResult<___VARIABLE_moduleName___Success, ___VARIABLE_moduleName___Failure>
 
