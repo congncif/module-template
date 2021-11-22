@@ -10,9 +10,10 @@ import Boardy
 import Foundation
 import UIKit
 
-final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBoard, GuaranteedOutputSendingBoard {
+final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBoard, GuaranteedOutputSendingBoard, GuaranteedActionSendingBoard {
 	typealias InputType = ___VARIABLE_moduleName___Parameter
     typealias OutputType = ___VARIABLE_moduleName___Output
+    typealias FlowActionType = ___VARIABLE_moduleName___Action
 
     init(identifier: BoardID, producer: ActivableBoardProducer) {
         super.init(identifier: identifier, boardProducer: producer)
