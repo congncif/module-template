@@ -25,8 +25,8 @@ public struct ___VARIABLE_moduleName___Destination {
     public static let defaultIdentifier: BoardID = .pub___VARIABLE_moduleName___
 }
 
-extension ActivatableBoard {
-    public func io___VARIABLE_moduleName___(_ identifier: BoardID = ___VARIABLE_moduleName___Destination.defaultIdentifier) -> ___VARIABLE_moduleName___Destination {
+public extension ActivatableBoard {
+    func io___VARIABLE_moduleName___(_ identifier: BoardID = ___VARIABLE_moduleName___Destination.defaultIdentifier) -> ___VARIABLE_moduleName___Destination {
         ___VARIABLE_moduleName___Destination(
             activation: activation(identifier, with: ___VARIABLE_moduleName___Parameter.self),
             interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self),
@@ -46,8 +46,8 @@ public struct ___VARIABLE_moduleName___MainDestination {
     public static let defaultIdentifier: BoardID = .pub___VARIABLE_moduleName___
 }
 
-extension MotherboardType where Self: FlowManageable {
-    public func io___VARIABLE_moduleName___(_ identifier: BoardID = ___VARIABLE_moduleName___MainDestination.defaultIdentifier) -> ___VARIABLE_moduleName___MainDestination {
+public extension MotherboardType where Self: FlowManageable {
+    func io___VARIABLE_moduleName___(_ identifier: BoardID = ___VARIABLE_moduleName___MainDestination.defaultIdentifier) -> ___VARIABLE_moduleName___MainDestination {
         ___VARIABLE_moduleName___MainDestination(
             activation: activation(identifier, with: ___VARIABLE_moduleName___Parameter.self),
             interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self),
