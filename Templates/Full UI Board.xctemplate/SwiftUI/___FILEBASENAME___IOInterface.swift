@@ -19,6 +19,7 @@ extension BoardID {
 
 struct ___VARIABLE_moduleName___Destination {
     let activation: BoardActivation<___VARIABLE_moduleName___Parameter>
+    let blockActivation: BlockTaskBoardActivation<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Output>
     let interaction: BoardInteraction<___VARIABLE_moduleName___Command>
     let completer: BoardCompleter
 }
@@ -27,6 +28,7 @@ extension ActivatableBoard {
     func io___VARIABLE_moduleName___(_ identifier: BoardID = .mod___VARIABLE_moduleName___) -> ___VARIABLE_moduleName___Destination {
         ___VARIABLE_moduleName___Destination(
             activation: activation(identifier, with: ___VARIABLE_moduleName___Parameter.self),
+            blockActivation: blockActivation(identifier, with: BlockTaskParameter<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Output>.self),
             interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self),
             completer: completer(identifier)
         )
@@ -35,6 +37,7 @@ extension ActivatableBoard {
 
 struct ___VARIABLE_moduleName___MainDestination {
     let activation: MainboardActivation<___VARIABLE_moduleName___Parameter>
+    let blockActivation: BlockTaskMainboardActivation<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Output>
     let interaction: MainboardInteraction<___VARIABLE_moduleName___Command>
     let completer: MainboardCompleter
     let flow: FlowHandler<___VARIABLE_moduleName___Output>
@@ -46,6 +49,7 @@ extension MotherboardType where Self: FlowManageable {
     func io___VARIABLE_moduleName___(_ identifier: BoardID = .mod___VARIABLE_moduleName___) -> ___VARIABLE_moduleName___MainDestination {
         ___VARIABLE_moduleName___MainDestination(
             activation: activation(identifier, with: ___VARIABLE_moduleName___Parameter.self),
+            blockActivation: blockActivation(identifier, with: BlockTaskParameter<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Output>.self),
             interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self),
             completer: completer(identifier),
             flow: matchedFlow(identifier, with: ___VARIABLE_moduleName___Output.self),
