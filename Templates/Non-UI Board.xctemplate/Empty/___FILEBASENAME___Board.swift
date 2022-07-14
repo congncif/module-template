@@ -3,7 +3,7 @@
 //  ___TARGETNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//  ___COPYRIGHT___
+//  Compatible with Boardy 1.47 or later
 //
 
 import Boardy
@@ -16,7 +16,7 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
     typealias FlowActionType = ___VARIABLE_moduleName___Action
     typealias CommandType = ___VARIABLE_moduleName___Command
 
-    init(identifier: BoardID, producer: ActivableBoardProducer) {
+    init(identifier: BoardID, producer: ActivatableBoardProducer) {
         super.init(identifier: identifier, boardProducer: producer)
         registerFlows()
     }

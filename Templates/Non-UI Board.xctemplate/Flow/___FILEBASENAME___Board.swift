@@ -3,14 +3,14 @@
 //  ___TARGETNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//  ___COPYRIGHT___
+//  Compatible with Boardy 1.47 or later
 //
 
 import Boardy
 import Foundation
 
 enum ___VARIABLE_moduleName___BoardFactory {
-    static func make(identifier: BoardID, producer: ActivableBoardProducer) -> ActivatableBoard {
+    static func make(identifier: BoardID, producer: ActivatableBoardProducer) -> ActivatableBoard {
         FlowBoard<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Output, ___VARIABLE_moduleName___Command, ___VARIABLE_moduleName___Action>(identifier: identifier, producer: producer) { it in
             <#register flows#>
         } flowActivation: { it, input in

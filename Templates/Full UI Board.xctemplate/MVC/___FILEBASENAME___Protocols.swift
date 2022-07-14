@@ -3,7 +3,7 @@
 //  ___TARGETNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//  ___COPYRIGHT___
+//  Compatible with Boardy 1.47 or later
 //
 
 import UIKit
