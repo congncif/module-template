@@ -51,6 +51,7 @@
 				<string>Block Task</string>
 				<string>Result Task</string>
 				<string>Flow</string>
+				<string>Flow non-IO</string>
 				<string>Barrier</string>
 				<string>Empty</string>
 			</array>
