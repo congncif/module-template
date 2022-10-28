@@ -44,16 +44,17 @@
 			<key>Type</key>
 			<string>popup</string>
 			<key>Default</key>
-			<string>Single Task</string>
+			<string>Block Task</string>
 			<key>Values</key>
 			<array>
-				<string>Single Task</string>
 				<string>Block Task</string>
-				<string>Result Task</string>
+				<string>Single Task</string>
+				<string>Single Result Task</string>
 				<string>Flow</string>
 				<string>Flow non-IO</string>
 				<string>Barrier</string>
 				<string>Empty</string>
+				<string>Empty non-IO</string>
 			</array>
 		</dict>
 	</array>
