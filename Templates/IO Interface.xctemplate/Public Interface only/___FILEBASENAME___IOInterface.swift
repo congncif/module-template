@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - ID
 
-extension BoardID {
+public extension BoardID {
     static let pub___VARIABLE_moduleName___: BoardID = "pub.mod.___TARGETNAME___.___VARIABLE_moduleName___"   
 }
 
