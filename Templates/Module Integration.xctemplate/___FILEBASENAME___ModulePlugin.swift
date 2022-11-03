@@ -26,29 +26,29 @@ public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
 
         switch service {
         case .default:
-            mainProducer.registerBoard(identifier) { identifier in
+            mainProducer.registerBoard(service.identifier) { identifier in
                 RootBoardFactory.make(identifier: identifier, producer: continuousProducer)
             }
         }
     }
 
-    public var identifier: BoardID {
-        switch service {
-        case let .default(identifier):
-            return identifier
-        }
-    }
-
     /// Each service is equivalent to one entry point
     public enum ServiceType {
-        case `default`(BoardID)
+        case `default`
+
+        public var identifier: BoardID {
+            switch self {
+                case .default:
+                    return <#identifier#>
+            }
+        }
     }
 }
 
 extension ___VARIABLE_moduleName___ModulePlugin {
     public static var bundledPlugins: [ModulePlugin] {
         return [
-            ___VARIABLE_moduleName___ModulePlugin(service: .default(___VARIABLE_moduleName___ID.default)),
+            ___VARIABLE_moduleName___ModulePlugin(service: .default),
         ]
     }
 }
