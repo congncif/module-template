@@ -10,14 +10,14 @@ import Boardy
 import Foundation
 import ___VARIABLE_moduleName___IO
 
-public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
-    public let service: ___VARIABLE_moduleName___ModulePlugin.ServiceType
+struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
+    let service: ___VARIABLE_moduleName___ModulePlugin.ServiceType
 
-    public init(service: ___VARIABLE_moduleName___ModulePlugin.ServiceType) {
+    init(service: ___VARIABLE_moduleName___ModulePlugin.ServiceType) {
         self.service = service
     }
 
-    public func apply(for main: MainComponent) {
+    func apply(for main: MainComponent) {
         let mainProducer = main.producer
 
         let continuousProducer = BoardProducer(externalProducer: mainProducer, registrationsBuilder: { producer in
@@ -33,10 +33,10 @@ public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
     }
 
     /// Each service is equivalent to one entry point
-    public enum ServiceType {
+    enum ServiceType {
         case `default`
 
-        public var identifier: BoardID {
+        var identifier: BoardID {
             switch self {
                 case .default:
                     return <#identifier#>
@@ -45,10 +45,15 @@ public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
     }
 }
 
-extension ___VARIABLE_moduleName___ModulePlugin {
-    public static var bundledPlugins: [ModulePlugin] {
-        return [
-            ___VARIABLE_moduleName___ModulePlugin(service: .default),
-        ]
+public struct ___VARIABLE_moduleName___LauncherPlugin: LauncherPlugin {
+    public init() { /**/ }
+
+    public var moduleComponent: ModuleComponent {
+        ModuleComponent(
+            modulePlugins: [
+                ___VARIABLE_moduleName___ModulePlugin(service: .default),
+            ],
+            urlOpenerPlugins: []
+        )
     }
 }
