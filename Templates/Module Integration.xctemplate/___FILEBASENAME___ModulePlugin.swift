@@ -48,7 +48,7 @@ struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
 public struct ___VARIABLE_moduleName___LauncherPlugin: LauncherPlugin {
     public init() { /**/ }
 
-    public var moduleComponent: ModuleComponent {
+    public func prepareForLaunching(withOptions options: MainOptions) -> ModuleComponent {
         ModuleComponent(
             modulePlugins: [
                 ___VARIABLE_moduleName___ModulePlugin(service: .default),
