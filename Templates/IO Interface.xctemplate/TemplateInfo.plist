@@ -48,12 +48,35 @@
 			<key>Values</key>
 			<array>
 				<string>Public</string>
-				<string>Public InOut only</string>
 				<string>Public Interface only</string>
+				<string>Public InOut only</string>
+				<string>Public ServiceMap only</string>
 				<string>Internal</string>
 				<string>Internal InOut only</string>
 				<string>Internal Interface only</string>
 			</array>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>withServiceMap</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Use ServiceMap</string>
+			<key>Description</key>
+			<string>The ServiceMap helps to visualize the graph of boards</string>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>Default</key>
+			<string>false</string>
+			<key>RequiredOptions</key>
+			<dict>
+				<key>scopeType</key>
+				<array>
+					<string>Public</string>
+					<string>Public Interface only</string>
+				</array>
+			</dict>
 		</dict>
 	</array>
 	<key>Platforms</key>

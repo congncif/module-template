@@ -82,12 +82,15 @@ remove_template NonUIBoard
 
 remove_template "UI Board"
 
+# remove_template "Service Map"
+
 # Install templates
 
 update_template "Full UI Board"
 update_template "Non-UI Board"
 update_template "IO Interface"
 update_template "Module Integration"
+update_template "Service Map"
 
 ##############################################################################################
 # DONE
