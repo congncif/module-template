@@ -11,7 +11,7 @@ import Foundation
 protocol ___VARIABLE_moduleName___Presentable: AnyObject {}
 
 final class ___VARIABLE_moduleName___Interactor {
-    weak var delegate: ___VARIABLE_moduleName___ControlDelegate?
+    weak var delegate: ___VARIABLE_moduleName___ControlDelegate!
     
     private let presenter: ___VARIABLE_moduleName___Presentable
 

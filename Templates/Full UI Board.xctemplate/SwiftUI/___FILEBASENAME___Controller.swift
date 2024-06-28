@@ -11,7 +11,7 @@ import Foundation
 protocol ___VARIABLE_moduleName___Viewable: AnyObject {}
 
 final class ___VARIABLE_moduleName___Controller {
-    weak var delegate: ___VARIABLE_moduleName___ControlDelegate?
+    weak var delegate: ___VARIABLE_moduleName___ControlDelegate!
     weak var view: ___VARIABLE_moduleName___Viewable!
 
     // MARK: Private properties
