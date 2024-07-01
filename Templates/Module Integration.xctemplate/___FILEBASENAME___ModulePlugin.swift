@@ -43,6 +43,10 @@ struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
             }
         }
     }
+
+    var identifier: BoardID {
+        service.identifier
+    }
 }
 
 public struct ___VARIABLE_moduleName___LauncherPlugin: LauncherPlugin {
