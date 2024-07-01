@@ -11,10 +11,16 @@ import Foundation
 import ___VARIABLE_moduleName___IO
 
 struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
-    let service: ___VARIABLE_moduleName___ModulePlugin.ServiceType
+    /// Each service is equivalent to one entry point
+    enum ServiceType {
+        case `default`
 
-    init(service: ___VARIABLE_moduleName___ModulePlugin.ServiceType) {
-        self.service = service
+        var identifier: BoardID {
+            switch self {
+                case .default:
+                    return <#identifier#>
+            }
+        }
     }
 
     func apply(for main: MainComponent) {
@@ -32,16 +38,10 @@ struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
         }
     }
 
-    /// Each service is equivalent to one entry point
-    enum ServiceType {
-        case `default`
+    let service: ___VARIABLE_moduleName___ModulePlugin.ServiceType
 
-        var identifier: BoardID {
-            switch self {
-                case .default:
-                    return <#identifier#>
-            }
-        }
+    init(service: ___VARIABLE_moduleName___ModulePlugin.ServiceType) {
+        self.service = service
     }
 
     var identifier: BoardID {
