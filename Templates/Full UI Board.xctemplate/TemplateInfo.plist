@@ -52,6 +52,40 @@
 				<string>SwiftUI</string>
 			</array>
 		</dict>
+
+		<dict>
+			<key>Identifier</key>
+			<string>useInterfaceModule</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Use Interface Module instead of IOInterface</string>
+			<key>Description</key>
+			<string>The IO Interface will be import from Module Interface</string>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>Default</key>
+			<string>false</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>The name of the module to create</string>
+			<key>Identifier</key>
+			<string>interfaceModuleName</string>
+			<key>Name</key>
+			<string>Interface Module Name</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+			<key>RequiredOptions</key>
+			<dict>
+				<key>useInterfaceModule</key>
+				<string>true</string>
+			</dict>
+		</dict>
 	</array>
 	<key>Platforms</key>
 	<array>

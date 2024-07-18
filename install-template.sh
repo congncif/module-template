@@ -81,6 +81,8 @@ remove_template UIBoard
 remove_template NonUIBoard
 
 remove_template "UI Board"
+remove_template "Full UI Board"
+remove_template "Non-UI Board"
 
 # remove_template "Service Map"
 
