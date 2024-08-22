@@ -3,7 +3,7 @@
 //  ___TARGETNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Compatible with Boardy 1.54 or later
+//  Compatible with Boardy 1.55.1 or later
 //
 
 import Boardy
@@ -13,7 +13,7 @@ import Foundation
 
 typealias ___VARIABLE_moduleName___Input = Void
 
-typealias ___VARIABLE_moduleName___Parameter = ___VARIABLE_moduleName___Input
+typealias ___VARIABLE_moduleName___Parameter = BlockTaskParameter<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Output>
 
 // MARK: - Output
 

@@ -8,6 +8,7 @@
 
 import Boardy
 import Foundation
+import ___VARIABLE_interfaceModuleName___
 
 enum ___VARIABLE_moduleName___BoardFactory {
     static func make(identifier: BoardID, executingType: ExecutingType = .concurrent) -> ActivatableBoard {
