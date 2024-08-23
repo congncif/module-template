@@ -26,6 +26,9 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
         
     }
 
+    /// Setup a barrier that needs to be overcome before activating
+    func activationBarrier(withGuaranteedInput input: InputType) -> ActivationBarrier? { nil }
+
     /// Handle the command received from other boards
     func interact(guaranteedCommand: CommandType) {}
 }
