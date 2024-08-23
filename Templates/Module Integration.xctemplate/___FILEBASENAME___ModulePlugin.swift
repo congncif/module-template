@@ -27,7 +27,7 @@ struct ___VARIABLE_moduleName___ModulePlugin: ModuleBuilderPlugin {
         <#RootBoardFactory.make(identifier: identifier, producer: internalContinuousProducer)#>
     }
 
-    func internalContinuousRegistrations(producer: any Boardy.ActivatableBoardProducer) -> [Boardy.BoardRegistration] { [] }
+    func internalContinuousRegistrations(producer: any Boardy.ActivatableBoardProducer) -> [Boardy.BoardRegistration] {}
 
     let service: ___VARIABLE_moduleName___ModulePlugin.ServiceType
 
