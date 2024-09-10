@@ -9,12 +9,8 @@
 import Boardy
 import Foundation
 
-public struct ___TARGETNAME___ServiceMap {
-    let mainboard: FlowMotherboard
-}
+public final class ___TARGETNAME___ServiceMap: ServiceMap {}
 
 public extension ServiceMap {
-    var mod___TARGETNAME___: ___TARGETNAME___ServiceMap {
-        ___TARGETNAME___ServiceMap(mainboard: mainboard)
-    }
+    var mod___TARGETNAME___: ___TARGETNAME___ServiceMap { link() }
 }
