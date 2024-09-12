@@ -12,7 +12,7 @@ import ___VARIABLE_moduleName___
 
 struct ___VARIABLE_moduleName___ModulePlugin: ModuleBuilderPlugin {
     /// Each service is equivalent to one entry point
-    enum ServiceType {
+    enum ServiceType: CaseIterable {
         case `default`
 
         var identifier: BoardID {
@@ -54,9 +54,9 @@ public struct ___VARIABLE_moduleName___LauncherPlugin: LauncherPlugin {
 
     public func prepareForLaunching(withOptions options: MainOptions) -> ModuleComponent {
         ModuleComponent(
-            modulePlugins: [
-                ___VARIABLE_moduleName___ModulePlugin(service: .default),
-            ],
+            modulePlugins: ___VARIABLE_moduleName___ModulePlugin.ServiceType.allCases.map {
+                ___VARIABLE_moduleName___ModulePlugin(service: $0)
+            },
             urlOpenerPlugins: [
                 ___VARIABLE_moduleName___URLOpenerPlugin()
             ]

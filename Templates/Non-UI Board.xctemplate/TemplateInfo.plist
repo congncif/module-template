@@ -77,6 +77,8 @@
 					<string>Flow</string>
 					<string>Empty</string>
 					<string>Block Task</string>
+					<string>Single Task</string>
+					<string>Single Result Task</string>
 				</array>
 			</dict>
 		</dict>
