@@ -24,11 +24,3 @@ extension MotherboardType where Self: FlowManageable {
         ___VARIABLE_moduleName___MainDestination(destinationID: identifier, mainboard: self)
     }
 }
-
-// public typealias ___VARIABLE_moduleName___Destination = BoardGenericDestination<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Command>
-//
-// extension ActivatableBoard {
-//    func io___VARIABLE_moduleName___(_ identifier: BoardID = .pub___VARIABLE_moduleName___) -> ___VARIABLE_moduleName___Destination {
-//        ___VARIABLE_moduleName___Destination(destinationID: identifier, source: self)
-//    }
-// }
