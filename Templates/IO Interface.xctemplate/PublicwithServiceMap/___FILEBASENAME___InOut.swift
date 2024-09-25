@@ -21,7 +21,7 @@ public typealias ___VARIABLE_moduleName___Output = Void
 
 // MARK: - Command
 
-public enum ___VARIABLE_moduleName___Command {}
+public typealias ___VARIABLE_moduleName___Command = Void
 
 // MARK: - Action
 
