@@ -13,7 +13,7 @@ struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Buildable {
         let nibName = String(describing: ___VARIABLE_moduleName___ViewController.self)
         let bundle = Bundle(for: ___VARIABLE_moduleName___ViewController.self)
         let viewController = UIStoryboard(name: nibName, bundle: bundle).instantiateInitialViewController() as! ___VARIABLE_moduleName___ViewController
-        viewController.delegate = delegate
+        viewController.actionDelegate = delegate
 
         let presenter = ___VARIABLE_moduleName___Presenter()
         presenter.view = viewController

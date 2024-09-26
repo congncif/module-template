@@ -17,7 +17,7 @@ protocol ___VARIABLE_moduleName___Interactable {
 final class ___VARIABLE_moduleName___ViewController: UIHostingController<___VARIABLE_moduleName___ContentView>, ___VARIABLE_moduleName___UserInterface {
     // MARK: Dependencies
 
-    weak var delegate: ___VARIABLE_moduleName___ActionDelegate!
+    weak var actionDelegate: ___VARIABLE_moduleName___ActionDelegate!
 
     var interactor: ___VARIABLE_moduleName___Interactable!
 
