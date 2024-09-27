@@ -13,7 +13,7 @@ import Foundation
 
 typealias ___VARIABLE_moduleName___Input = Void
 
-typealias ___VARIABLE_moduleName___Parameter = ___VARIABLE_moduleName___Input
+typealias ___VARIABLE_moduleName___Parameter = BlockTaskParameter<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Output>
 
 // MARK: - Output
 
