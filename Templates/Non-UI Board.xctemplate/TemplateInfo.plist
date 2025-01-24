@@ -51,10 +51,9 @@
 				<string>Single Task</string>
 				<string>Single Result Task</string>
 				<string>Flow</string>
-				<string>Flow non-IO</string>
 				<string>Barrier</string>
 				<string>Empty</string>
-				<string>Empty non-IO</string>
+				<string>Attachable</string>
 			</array>
 		</dict>
 		<dict>
@@ -75,6 +74,7 @@
 				<key>scopeType</key>
 				<array>
 					<string>Flow</string>
+					<string>Attachable</string>
 					<string>Empty</string>
 					<string>Block Task</string>
 					<string>Single Task</string>

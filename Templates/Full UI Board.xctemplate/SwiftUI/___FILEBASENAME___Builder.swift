@@ -9,11 +9,11 @@
 import UIKit
 
 struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Buildable {
-    func build(withDelegate delegate: ___VARIABLE_moduleName___Delegate?) -> ___VARIABLE_moduleName___Interface {
+    func build(withDelegate delegate: ___VARIABLE_moduleName___Delegate?, input: ___VARIABLE_moduleName___Input) -> ___VARIABLE_moduleName___Interface {
         let viewController = ___VARIABLE_moduleName___ViewController(rootView: ___VARIABLE_moduleName___ContentView())
         viewController.actionDelegate = delegate
 
-        let controller = ___VARIABLE_moduleName___Controller()
+        let controller = ___VARIABLE_moduleName___Controller(input: input)
         controller.delegate = delegate
         controller.view = viewController
         

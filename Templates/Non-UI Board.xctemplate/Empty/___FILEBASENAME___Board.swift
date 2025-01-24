@@ -31,6 +31,8 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
 
     /// Handle the command received from other boards
     func interact(guaranteedCommand: CommandType) {}
+
+    // MARK: Private properties
 }
 
 private extension ___VARIABLE_moduleName___Board {

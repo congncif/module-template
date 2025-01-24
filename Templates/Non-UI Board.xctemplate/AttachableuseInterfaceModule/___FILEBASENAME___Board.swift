@@ -8,16 +8,14 @@
 
 import Boardy
 import Foundation
-import SiFUtilities
 import UIKit
+import ___VARIABLE_interfaceModuleName___
 
 final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBoard, GuaranteedOutputSendingBoard, GuaranteedActionSendingBoard, GuaranteedCommandBoard {
 	typealias InputType = ___VARIABLE_moduleName___Input
     typealias OutputType = ___VARIABLE_moduleName___Output
     typealias FlowActionType = ___VARIABLE_moduleName___Action
     typealias CommandType = ___VARIABLE_moduleName___Command
-
-    // MARK: Dependencies
 
     private let builder: ___VARIABLE_moduleName___Buildable
 
@@ -29,11 +27,10 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
 
     /// Build and run an instance of Boardy micro-service
     func activate(withGuaranteedInput input: InputType) {
-        let component = builder.build(withDelegate: self, input: input)
-        let viewController = component.userInterface
-        watch(content: component.controller)
-        motherboard.putIntoContext(viewController)
-        rootViewController.show(viewController)
+        let controller = builder.build(withDelegate: self, input: input)
+        attachObject(controller)
+        watch(content: controller)
+        controller.becomeActive()
     }
 
     /// Setup a barrier that needs to be overcome before activating
@@ -49,9 +46,7 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
     }
 }
 
-extension ___VARIABLE_moduleName___Board: ___VARIABLE_moduleName___Delegate {
-    func loadData() {}
-}
+extension ___VARIABLE_moduleName___Board: ___VARIABLE_moduleName___Delegate {}
 
 private extension ___VARIABLE_moduleName___Board {
     func registerFlows() {}

@@ -16,14 +16,20 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
     typealias FlowActionType = ___VARIABLE_moduleName___Action
     typealias CommandType = ___VARIABLE_moduleName___Command
 
-    init(identifier: BoardID, producer: ActivatableBoardProducer) {
+    private let builder: ___VARIABLE_moduleName___Buildable
+
+    init(identifier: BoardID, builder: ___VARIABLE_moduleName___Buildable, producer: ActivatableBoardProducer) {
+        self.builder = builder
         super.init(identifier: identifier, boardProducer: producer)
         registerFlows()
     }
 
     /// Build and run an instance of Boardy micro-service
     func activate(withGuaranteedInput input: InputType) {
-        
+        let controller = builder.build(withDelegate: self, input: input)
+        attachObject(controller)
+        watch(content: controller)
+        controller.becomeActive()
     }
 
     /// Setup a barrier that needs to be overcome before activating
@@ -31,7 +37,15 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
 
     /// Handle the command received from other boards
     func interact(guaranteedCommand: CommandType) {}
+
+    // MARK: Private properties
+
+    private var controller: ___VARIABLE_moduleName___Controllable? {
+        lastAvailableWatchedContent()
+    }
 }
+
+extension ___VARIABLE_moduleName___Board: ___VARIABLE_moduleName___Delegate {}
 
 private extension ___VARIABLE_moduleName___Board {
     func registerFlows() {}

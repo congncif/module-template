@@ -38,5 +38,5 @@ struct ___VARIABLE_moduleName___Interface {
 
 /// Construct and connect dependencies
 protocol ___VARIABLE_moduleName___Buildable {
-    func build(withDelegate delegate: ___VARIABLE_moduleName___Delegate?) -> ___VARIABLE_moduleName___Interface
+    func build(withDelegate delegate: ___VARIABLE_moduleName___Delegate?, input: ___VARIABLE_moduleName___Input) -> ___VARIABLE_moduleName___Interface
 }

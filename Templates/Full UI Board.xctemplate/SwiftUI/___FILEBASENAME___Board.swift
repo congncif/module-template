@@ -31,6 +31,7 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
     func activate(withGuaranteedInput input: InputType) {
         let component = builder.build(withDelegate: self)
         let viewController = component.userInterface
+        watch(content: component.controller)
         motherboard.putIntoContext(viewController)
         rootViewController.show(viewController)
     }
@@ -42,6 +43,10 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
     func interact(guaranteedCommand: CommandType) {}
 
     // MARK: Private properties
+
+    private var controller: ___VARIABLE_moduleName___Controllable? {
+        lastAvailableWatchedContent()
+    }
 }
 
 extension ___VARIABLE_moduleName___Board: ___VARIABLE_moduleName___Delegate {

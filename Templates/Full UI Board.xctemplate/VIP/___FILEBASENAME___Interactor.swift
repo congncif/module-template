@@ -14,9 +14,11 @@ final class ___VARIABLE_moduleName___Interactor {
     weak var delegate: ___VARIABLE_moduleName___ControlDelegate!
     
     private let presenter: ___VARIABLE_moduleName___Presentable
+    private let input: ___VARIABLE_moduleName___Input
 
-    init(presenter: ___VARIABLE_moduleName___Presentable) {
+    init(presenter: ___VARIABLE_moduleName___Presentable, input: ___VARIABLE_moduleName___Input) {
         self.presenter = presenter
+        self.input = input
     }
 
     // MARK: Private properties
