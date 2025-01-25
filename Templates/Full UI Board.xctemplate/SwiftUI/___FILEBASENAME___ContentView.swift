@@ -11,6 +11,7 @@ import SwiftUI
 
 struct ___VARIABLE_moduleName___ContentView: View {
     let interactor: ___VARIABLE_moduleName___Interactable
+    let interoperator: ___VARIABLE_moduleName___ViewControllerInteroperable
 
     @ObservedObject var state: ___VARIABLE_moduleName___ViewState
 

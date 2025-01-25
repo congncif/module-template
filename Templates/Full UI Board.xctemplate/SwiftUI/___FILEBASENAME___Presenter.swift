@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Use for updating SwiftUI State
 final class ___VARIABLE_moduleName___ViewState: ObservableObject {
     @Published fileprivate(set) var text: String = "___VARIABLE_moduleName___ Content View"
 
@@ -15,7 +16,7 @@ final class ___VARIABLE_moduleName___ViewState: ObservableObject {
 }
 
 final class ___VARIABLE_moduleName___Presenter: XXXPresentable {
-    let state: ___VARIABLE_moduleName___ViewState
+    private let state: ___VARIABLE_moduleName___ViewState
 
     init(state: ___VARIABLE_moduleName___ViewState) {
         self.state = state

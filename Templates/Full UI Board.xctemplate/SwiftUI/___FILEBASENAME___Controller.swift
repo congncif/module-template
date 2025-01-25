@@ -8,10 +8,12 @@
 
 import Foundation
 
+/// Use for sending Domain Model to with Presenter
 enum ___VARIABLE_moduleName___ModelEvent {
     case newText(String)
 }
 
+/// Use for mapping Domain Model to View Model (View State)
 protocol ___VARIABLE_moduleName___Presentable: AnyObject {
     func mapModel(event: ___VARIABLE_moduleName___ModelEvent)
 }

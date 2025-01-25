@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Use for mapping Domain Model to View Model (View State)
 protocol ___VARIABLE_moduleName___Presentable: AnyObject {}
 
 final class ___VARIABLE_moduleName___Interactor {
