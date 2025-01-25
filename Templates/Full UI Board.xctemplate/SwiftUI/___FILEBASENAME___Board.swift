@@ -29,7 +29,7 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
 
     /// Build and run an instance of Boardy micro-service
     func activate(withGuaranteedInput input: InputType) {
-        let component = builder.build(withDelegate: self)
+        let component = builder.build(withDelegate: self, input: input)
         let viewController = component.userInterface
         watch(content: component.controller)
         motherboard.putIntoContext(viewController)

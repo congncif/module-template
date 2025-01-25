@@ -9,11 +9,6 @@
 import UIKit
 import SwiftUI
 
-/// Use for interacting with data before sending messages to outside
-protocol ___VARIABLE_moduleName___Interactable {
-    func didBecomeActive()
-}
-
 final class ___VARIABLE_moduleName___ViewController: UIHostingController<___VARIABLE_moduleName___ContentView>, ___VARIABLE_moduleName___UserInterface {
     // MARK: Dependencies
 
@@ -29,17 +24,7 @@ final class ___VARIABLE_moduleName___ViewController: UIHostingController<___VARI
         interactor.didBecomeActive()
     }
 
-    // MARK: Private computed & temporary properties
-
-    // MARK: IBOutlets / IBActions
-}
-
-// MARK: - Behaviors
-
-extension ___VARIABLE_moduleName___ViewController: ___VARIABLE_moduleName___Viewable {}
-
-// MARK: - Private methods
-
-private extension ___VARIABLE_moduleName___ViewController {
-    func setupView() {}
+    private func setupView() {
+        title = "___VARIABLE_moduleName___ Title"
+    }
 }
