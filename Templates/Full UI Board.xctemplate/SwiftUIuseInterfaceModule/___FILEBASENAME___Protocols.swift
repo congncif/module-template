@@ -16,11 +16,14 @@ protocol ___VARIABLE_moduleName___Controllable: AnyObject {}
 // MARK: - Outward
 
 /// Use for ViewController sending messages to outside directly
-protocol ___VARIABLE_moduleName___ActionDelegate: AnyObject {}
+protocol ___VARIABLE_moduleName___ActionDelegate: AnyObject {
+    func close(_ isDone: Bool)
+}
 
 /// Use for Controller (Interactor) sending messages to outside
 protocol ___VARIABLE_moduleName___ControlDelegate: AnyObject {
     func loadData()
+    func performCompletion(_ isDone: Bool)
 }
 
 /// Interface combined of above two delegates for convenience using purpose

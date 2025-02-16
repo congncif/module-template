@@ -33,7 +33,16 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
         let viewController = component.userInterface
         watch(content: component.controller)
         motherboard.putIntoContext(viewController)
+
+        // Show content
         rootViewController.show(viewController)
+
+        // Connect event buses
+        completeBus.connect(target: self) { target, isDone in
+            target.rootViewController.returnHere { [weak target] in
+                target?.complete(isDone)
+            }
+        }
     }
 
     /// Setup a barrier that needs to be overcome before activating
@@ -44,6 +53,8 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
 
     // MARK: Private properties
 
+    private let completeBus = Bus<Bool>()
+
     private var controller: ___VARIABLE_moduleName___Controllable? {
         lastAvailableWatchedContent()
     }
@@ -51,6 +62,14 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
 
 extension ___VARIABLE_moduleName___Board: ___VARIABLE_moduleName___Delegate {
     func loadData() {}
+
+    func close(_ isDone: Bool) {
+        completeBus.transport(input: isDone)
+    }
+
+    func performCompletion(_ isDone: Bool) {
+        completeBus.transport(input: isDone)
+    }
 }
 
 private extension ___VARIABLE_moduleName___Board {

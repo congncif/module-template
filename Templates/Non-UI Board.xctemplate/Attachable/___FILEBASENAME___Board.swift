@@ -45,7 +45,11 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
     }
 }
 
-extension ___VARIABLE_moduleName___Board: ___VARIABLE_moduleName___Delegate {}
+extension ___VARIABLE_moduleName___Board: ___VARIABLE_moduleName___Delegate {
+    func performCompletion(_ isDone: Bool) {
+        complete(isDone)
+    }
+}
 
 private extension ___VARIABLE_moduleName___Board {
     func registerFlows() {}

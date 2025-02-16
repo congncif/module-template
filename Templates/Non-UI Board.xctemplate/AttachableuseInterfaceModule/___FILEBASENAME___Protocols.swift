@@ -19,7 +19,9 @@ protocol ___VARIABLE_moduleName___Controllable: AnyObject {
 // MARK: - Outward
 
 /// Interface combined of above two delegates for convenience using purpose
-protocol ___VARIABLE_moduleName___Delegate: DetachableObject {}
+protocol ___VARIABLE_moduleName___Delegate: DetachableObject {
+    func performCompletion(_ isDone: Bool)
+}
 
 /// Construct and connect dependencies
 protocol ___VARIABLE_moduleName___Buildable {
