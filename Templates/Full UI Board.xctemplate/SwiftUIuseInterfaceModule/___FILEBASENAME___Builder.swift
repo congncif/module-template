@@ -17,7 +17,7 @@ struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Buildable {
         let controller = ___VARIABLE_moduleName___Controller(presenter: presenter, input: input)
         controller.delegate = delegate
 
-        let proxy = XXXViewControllerProxy()
+        let proxy = ___VARIABLE_moduleName___ViewControllerProxy()
 
         let contentView = ___VARIABLE_moduleName___ContentView(interactor: controller, interoperator: proxy, state: state)
         let viewController = ___VARIABLE_moduleName___ViewController(rootView: contentView)
@@ -26,6 +26,6 @@ struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Buildable {
 
         proxy.viewController = viewController
 
-        return XXXInterface(userInterface: viewController, controller: controller)
+        return ___VARIABLE_moduleName___Interface(userInterface: viewController, controller: controller)
     }
 }

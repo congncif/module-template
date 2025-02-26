@@ -32,6 +32,6 @@ final class ___VARIABLE_moduleName___ViewController: UIHostingController<___VARI
 /// Use for interoperating with UIKit hosting
 protocol ___VARIABLE_moduleName___ViewControllerInteroperable {}
 
-final class XXXViewControllerProxy: XXXViewControllerInteroperable {
+final class ___VARIABLE_moduleName___ViewControllerProxy: ___VARIABLE_moduleName___ViewControllerInteroperable {
     weak var viewController: ___VARIABLE_moduleName___ViewController!
 }

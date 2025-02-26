@@ -15,7 +15,7 @@ final class ___VARIABLE_moduleName___ViewState: ObservableObject {
     init(input _: ___VARIABLE_moduleName___Input) {}
 }
 
-final class ___VARIABLE_moduleName___Presenter: XXXPresentable {
+final class ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___Presentable {
     private let state: ___VARIABLE_moduleName___ViewState
 
     init(state: ___VARIABLE_moduleName___ViewState) {
