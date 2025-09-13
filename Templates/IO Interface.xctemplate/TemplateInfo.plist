@@ -75,6 +75,8 @@
 				<array>
 					<string>Public</string>
 					<string>Public Interface only</string>
+					<string>Internal</string>
+					<string>Internal Interface only</string>
 				</array>
 			</dict>
 		</dict>

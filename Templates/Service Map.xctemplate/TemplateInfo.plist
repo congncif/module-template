@@ -22,10 +22,11 @@
 				<key>Type</key>
 				<string>popup</string>
 				<key>Default</key>
-				<string>Module</string>
+				<string>Public</string>
 				<key>Values</key>
 				<array>
-					<string>Module</string>
+					<string>Public</string>
+					<string>Internal Plugins module</string>
 				</array>
 			</dict>
 		</array>
