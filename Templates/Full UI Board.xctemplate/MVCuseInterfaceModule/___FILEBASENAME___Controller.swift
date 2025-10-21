@@ -6,6 +6,7 @@
 //  Compatible with Boardy 1.55.1 or later
 //
 
+import ___VARIABLE_interfaceModuleName___
 import Foundation
 
 protocol ___VARIABLE_moduleName___Viewable: AnyObject {}

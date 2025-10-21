@@ -6,6 +6,7 @@
 //  Compatible with Boardy 1.55.1 or later
 //
 
+import ___VARIABLE_interfaceModuleName___
 import UIKit
 
 struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Buildable {

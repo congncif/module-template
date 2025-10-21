@@ -6,6 +6,7 @@
 //  Compatible with Boardy 1.55.1 or later
 //
 
+import ___VARIABLE_interfaceModuleName___
 import UIKit
 
 struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Buildable {
@@ -18,7 +19,7 @@ struct ___VARIABLE_moduleName___Builder: ___VARIABLE_moduleName___Buildable {
         let controller = ___VARIABLE_moduleName___Controller(input: input)
         controller.delegate = delegate
         controller.view = viewController
-        
+
         viewController.interactor = controller
 
         return ___VARIABLE_moduleName___Interface(userInterface: viewController, controller: controller)

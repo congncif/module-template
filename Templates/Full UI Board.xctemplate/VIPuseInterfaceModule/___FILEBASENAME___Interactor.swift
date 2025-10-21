@@ -6,6 +6,7 @@
 //  Compatible with Boardy 1.55.1 or later
 //
 
+import ___VARIABLE_interfaceModuleName___
 import Foundation
 
 /// Use for mapping Domain Model to View Model (View State)
@@ -13,7 +14,7 @@ protocol ___VARIABLE_moduleName___Presentable: AnyObject {}
 
 final class ___VARIABLE_moduleName___Interactor {
     weak var delegate: ___VARIABLE_moduleName___ControlDelegate!
-    
+
     private let presenter: ___VARIABLE_moduleName___Presentable
     private let input: ___VARIABLE_moduleName___Input
 
