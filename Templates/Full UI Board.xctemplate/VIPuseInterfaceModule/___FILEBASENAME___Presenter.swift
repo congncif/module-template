@@ -11,7 +11,7 @@ import Foundation
 protocol ___VARIABLE_moduleName___Viewable: AnyObject {}
 
 final class ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___Presentable {
-    weak var view: ___VARIABLE_moduleName___Viewable!
+    weak var view: ___VARIABLE_moduleName___Viewable?
 
     // MARK: Private properties
 }

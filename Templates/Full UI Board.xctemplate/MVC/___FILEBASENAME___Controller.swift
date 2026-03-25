@@ -12,7 +12,7 @@ protocol ___VARIABLE_moduleName___Viewable: AnyObject {}
 
 final class ___VARIABLE_moduleName___Controller {
     weak var delegate: ___VARIABLE_moduleName___ControlDelegate!
-    weak var view: ___VARIABLE_moduleName___Viewable!
+    weak var view: ___VARIABLE_moduleName___Viewable?
 
     private let input: ___VARIABLE_moduleName___Input
 
