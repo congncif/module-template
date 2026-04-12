@@ -17,7 +17,7 @@ final class ___VARIABLE_moduleName___Board: ModernContinuableBoard, GuaranteedBo
     typealias FlowActionType = ___VARIABLE_moduleName___Action
     typealias CommandType = ___VARIABLE_moduleName___Command
 
-    init(identifier: BoardID, producer: ActivatableBoardProducer) {
+    override init(identifier: BoardID, producer: ActivatableBoardProducer) {
         super.init(identifier: identifier, boardProducer: producer)
         registerFlows()
     }
